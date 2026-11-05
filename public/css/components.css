@@ -12,10 +12,6 @@
 .btn:hover { background: var(--blue); color: var(--white); }
 .btn--solid { background: var(--blue); color: var(--white); }
 .btn--solid:hover { background: var(--blue-hover); border-color: var(--blue-hover); }
-.btn--pill { border: 1px solid var(--white); border-radius: 30px; min-height: 52px; padding-inline: 30px; color: var(--white); font-weight: 400; }
-.btn--pill:hover { background: var(--white); color: var(--black); }
-.btn--pill-solid { border-color: var(--white); background: var(--white); color: var(--black); font-weight: 500; }
-.btn--pill-solid:hover { background: transparent; color: var(--white); }
 
 .link { color: var(--blue); text-underline-offset: 3px; transition: color .2s ease-in-out; }
 .link:hover { color: var(--blue-hover); }
