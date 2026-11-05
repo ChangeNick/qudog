@@ -1,4 +1,4 @@
-// Шапка, мобильное меню, видео-петли, письмо из формы.
+// Шапка, мобильное меню, большое видео, видео-петли, письмо из формы.
 (() => {
   'use strict';
 
@@ -24,6 +24,18 @@
   document.addEventListener('click', (e) => { if (menuOpen && !header.contains(e.target)) setMenu(false); });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menuOpen) { setMenu(false); menuBtn.focus(); }
+  });
+
+  // Большое видео: своя кнопка вместо штатных контролов, пока ролик не запущен.
+  // Без JS остаются обычные контролы.
+  const film = document.getElementById('film-video');
+  const filmPlay = document.getElementById('film-play');
+  film.controls = false;
+  filmPlay.hidden = false;
+  filmPlay.addEventListener('click', () => {
+    filmPlay.hidden = true;
+    film.controls = true;
+    film.play();
   });
 
   // Тихие короткие ролики играют только в зоне видимости.

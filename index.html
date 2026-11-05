@@ -61,7 +61,7 @@
   <div class="wrap hero__body">
     <div class="hero__main">
       <div>
-        <h1>Робот сам обходит объект, видит нарушения и сразу сообщает о них</h1>
+        <h1>Автономные <span class="nowrap">роботы-собаки</span> под задачи мониторинга и инспекции</h1>
         <p class="hero__lead">Qudog это российское ПО автономного патруля и инспекции для роботов-собак Inchbot и Unitree. Поставляем робота вместе с ПО, настраиваем под объект, обучаем охрану.</p>
       </div>
       <div class="hero__actions">
@@ -70,12 +70,33 @@
       </div>
     </div>
     <ul class="trust" aria-label="Подтверждения">
-      <li><a href="https://reestr.digital.gov.ru/reestr/16296431/" target="_blank" rel="noopener">В реестре российского ПО<span aria-hidden="true"> ↗</span></a></li>
-      <li><a href="https://i.moscow/company/54615046" target="_blank" rel="noopener">Участник Московского инновационного кластера<span aria-hidden="true"> ↗</span></a></li>
-      <li>В партнёрстве со Сколтехом</li>
-      <li>Аккредитованная ИТ-компания</li>
-      <li><a href="#tests">Испытания в Центре робототехники МИК</a></li>
+      <li>
+        <img src="public/images/logos/mik.svg" width="146" height="40" alt="Московский инновационный кластер">
+        <p><a href="https://i.moscow/company/54615046" target="_blank" rel="noopener">Участник кластера<span aria-hidden="true"> ↗</span></a><br><a href="#tests">Испытания в Центре робототехники</a></p>
+      </li>
+      <li>
+        <img src="public/images/logos/skoltech.svg" width="1000" height="177" alt="Сколтех" class="trust__skoltech">
+        <p>Выступаем в партнёрстве<br>со Сколтехом</p>
+      </li>
+      <li>
+        <span class="trust__title">Российское ПО</span>
+        <p><a href="https://reestr.digital.gov.ru/reestr/16296431/" target="_blank" rel="noopener">В реестре российского ПО<span aria-hidden="true"> ↗</span></a><br>Аккредитованная <span class="nowrap">ИТ-компания</span></p>
+      </li>
     </ul>
+  </div>
+</section>
+
+<!-- ============ БОЛЬШОЕ ВИДЕО ============ -->
+<section class="film" id="film">
+  <div class="wrap">
+    <div class="player player--film">
+      <video id="film-video" controls preload="none" playsinline poster="public/images/posters/tests-a.webp" width="1920" height="1080" aria-label="Видео с испытаний, 2 минуты">
+        <source src="public/video/tests-a.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
+        <source src="public/video/tests-a.h264.mp4" type="video/mp4">
+      </video>
+      <button class="player__play" id="film-play" type="button" hidden aria-label="Смотреть видео с испытаний"><span aria-hidden="true"></span></button>
+    </div>
+    <p class="film__caption">Роботы на испытаниях: полигон и павильон, август 2026. 2 минуты, со звуком. <a href="#tests">Результаты и протоколы</a></p>
   </div>
 </section>
 
@@ -474,22 +495,22 @@
     <div class="tests-video">
       <figure>
         <div class="player">
-          <video controls preload="none" playsinline poster="public/images/posters/tests-a.webp" width="1920" height="1080" aria-label="Видео с испытаний, 2 минуты">
-            <source src="public/video/tests-a.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
-            <source src="public/video/tests-a.h264.mp4" type="video/mp4">
-          </video>
-        </div>
-        <figcaption class="caption">Видео с испытаний: полигон и павильон. 2 минуты, со звуком</figcaption>
-      </figure>
-      <figure>
-        <div class="player">
           <video controls preload="none" playsinline poster="public/images/posters/tests-b.webp" width="1080" height="606" aria-label="Вторая нарезка с испытаний, 2 минуты">
             <source src="public/video/tests-b.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
             <source src="public/video/tests-b.h264.mp4" type="video/mp4">
           </video>
         </div>
-        <figcaption class="caption">Те же испытания крупнее: роботы, пульт, работа оператора</figcaption>
+        <figcaption class="caption">Испытания крупным планом: роботы, пульт, работа оператора</figcaption>
       </figure>
+      <div class="tests-docs">
+        <h3>Программы и протоколы испытаний</h3>
+        <div class="docs">
+          <a class="doc" href="public/docs/pmi-28-unitree-a2-w.pdf" download="ПМИ_28_Unitree_A2-W.pdf"><span>Unitree A2-W, № 28<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
+          <a class="doc" href="public/docs/pmi-29-inchbot-l1-edu.pdf" download="ПМИ_29_Inchbot_L1_Edu.pdf"><span>Inchbot L1 Edu, № 29<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
+          <a class="doc" href="public/docs/pmi-30-inchbot-m1.pdf" download="ПМИ_30_Inchbot_M1.pdf"><span>Inchbot M1, № 30<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
+        </div>
+        <p class="note">В опубликованных копиях скрыты контакты представителей. На видео M1 и L1 Edu с грузом также проходят пандусы 7° и пороги до 20 см.</p>
+      </div>
     </div>
 
     <div class="loops">
@@ -519,15 +540,6 @@
     </div>
 
     <div class="proofs">
-      <div>
-        <h3>Программы и протоколы испытаний</h3>
-        <div class="docs">
-          <a class="doc" href="public/docs/pmi-28-unitree-a2-w.pdf" download="ПМИ_28_Unitree_A2-W.pdf"><span>Unitree A2-W, № 28<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
-          <a class="doc" href="public/docs/pmi-29-inchbot-l1-edu.pdf" download="ПМИ_29_Inchbot_L1_Edu.pdf"><span>Inchbot L1 Edu, № 29<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
-          <a class="doc" href="public/docs/pmi-30-inchbot-m1.pdf" download="ПМИ_30_Inchbot_M1.pdf"><span>Inchbot M1, № 30<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
-        </div>
-        <p class="note">В опубликованных копиях скрыты контакты представителей. На видео M1 и L1 Edu с грузом также проходят пандусы 7° и пороги до 20 см.</p>
-      </div>
       <div class="proofs__list">
         <h3>ПО и компания</h3>
         <dl>

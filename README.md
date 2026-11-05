@@ -16,6 +16,8 @@
 | Фото команды | `public/images/photos/team-768.webp`, `team-1280.webp` |
 | Цвета, шрифт, радиусы | `public/css/tokens.css` |
 | Логотип | `index.html`, символ `#logo` в начале страницы |
+| Логотипы партнёров | `public/images/logos/`, блок `.trust` в первом экране |
+| Большое видео под первым экраном | `index.html`, блок «БОЛЬШОЕ ВИДЕО» |
 | Письмо из формы | `public/js/main.js` |
 
 ## Файлы

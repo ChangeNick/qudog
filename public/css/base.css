@@ -44,4 +44,5 @@ h4 { font-size: 16px; line-height: 1.35; font-weight: 600; }
 @media (max-width: 860px) { .section-head { grid-template-columns: 1fr; } }
 
 .muted { color: var(--muted); }
+.nowrap { white-space: nowrap; }
 .note { font-size: 14px; line-height: 1.45; color: var(--muted); }
