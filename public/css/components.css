@@ -174,31 +174,31 @@
 }
 
 /* Просмотр изображений */
-.zoomable { cursor: zoom-in; }
-.has-lightbox { overflow: hidden; }
-.has-lightbox body, .has-lightbox .header { padding-right: var(--scrollbar, 0); }
+.zoomable { cursor: pointer; }
 
 .lightbox {
   position: fixed; inset: 0; width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0;
-  background: rgba(10, 10, 10, 0); color: var(--on-dark); overflow: hidden;
-  transition: background-color .3s ease;
+  background: transparent; color: var(--on-dark); overflow: hidden; overscroll-behavior: contain;
 }
 .lightbox[open] { display: grid; place-items: center; }
-.lightbox.is-visible { background: rgba(10, 10, 10, .9); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+/* Затемнение отдельным слоем: меняется только opacity, поэтому анимация не нагружает страницу */
+.lightbox::before { content: ""; position: absolute; inset: 0; background: #0a0a0a; opacity: 0; transition: opacity .34s ease; }
+.lightbox.is-visible::before { opacity: .96; }
 .lightbox::backdrop { background: transparent; }
 
-.lightbox__figure { display: flex; flex-direction: column; align-items: center; max-width: 100%; }
+.lightbox__figure { position: relative; display: flex; flex-direction: column; align-items: center; max-width: 100%; }
 .lightbox__figure img {
   /* Ширина: сколько есть у файла, но в пределах экрана и с сохранением пропорций */
   width: min(var(--w), 1500px, 100vw - 144px, (100dvh - 112px) * var(--ratio));
   max-width: none; height: auto; aspect-ratio: var(--ratio);
-  border-radius: 10px; cursor: default; will-change: transform;
+  border-radius: 10px; cursor: default; will-change: transform, opacity;
 }
 .lightbox__figure figcaption { max-width: min(calc(100vw - 144px), 720px); min-height: 20px; margin-top: 12px; font-size: 14px; line-height: 1.4; color: #cfcfcf; text-align: center; }
 
 .lightbox__btn, .lightbox__figure figcaption { opacity: 0; transition: opacity .25s ease, background-color .2s ease-in-out; }
 .lightbox.is-visible .lightbox__btn, .lightbox.is-visible figcaption { opacity: 1; }
-.lightbox__btn { position: absolute; z-index: 1; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .12); color: var(--white); cursor: pointer; }
+.lightbox__ghost { position: fixed; z-index: 1; margin: 0; max-width: none; border-radius: 10px; pointer-events: none; will-change: transform, opacity; }
+.lightbox__btn { position: absolute; z-index: 2; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .12); color: var(--white); cursor: pointer; }
 .lightbox__btn:hover { background: rgba(255, 255, 255, .24); }
 .lightbox__btn[hidden] { display: none; }
 .lightbox__close { top: 16px; right: 16px; }
@@ -220,5 +220,5 @@
   .lightbox__next { right: calc(50% - 56px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .lightbox, .lightbox__btn, .lightbox__figure figcaption { transition: none; }
+  .lightbox::before, .lightbox__btn, .lightbox__figure figcaption { transition: none; }
 }
