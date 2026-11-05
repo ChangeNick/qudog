@@ -1,1644 +1,777 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#4760de">
-    <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta name="description" content="Российское ПО автономной навигации из реестра: автономное патрулирование, видеоаналитика, подъём и спуск по лестницам. Видео, пять платформ и подбор решения для вашего объекта.">
-    <title>
-      Автономная навигация роботов-собак | Qubot
-    </title>
-    <link rel="icon" href="public/images/favicon.svg" type="image/svg+xml">
-    <link rel="preload" href="public/fonts/wix-regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="public/styles.css">
-    <script src="public/models.js" defer>
-    </script>
-    <script src="public/contact-mail.js" defer>
-    </script>
-    <script src="public/app.js" defer>
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">
-      К содержимому
-    </a>
-    <header class="header">
-      <a class="brand" href="#" aria-label="Qubot — на главную">
-        <img src="public/images/logo.svg" width="122" height="35" alt="Qubot">
-      </a>
-      <span class="header-product">
-        АВТОНОМНЫЕ РОБОСОБАКИ
-      </span>
-      <nav id="navigation" aria-label="Основная навигация">
-        <a href="#platform">
-          Возможности
-        </a>
-        <a href="#video">
-          Видео ПО
-        </a>
-        <a href="#models">
-          Роботы
-        </a>
-        <a href="#cases">
-          Кейсы
-        </a>
-        <a href="#contact">
-          Обратная связь
-        </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Qubot: автономный патруль и инспекция роботами-собаками</title>
+  <meta name="description" content="Российское ПО Qubot для роботов-собак Inchbot и Unitree. Обходы по расписанию, видеоаналитика, отчёт по каждой миссии. Три платформы прошли испытания в Центре робототехники МИК.">
+  <link rel="icon" href="public/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="public/fonts/wix-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="public/fonts/wix-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="public/images/photos/hero-ramp-1920.webp" imagesrcset="public/images/photos/hero-ramp-768.webp 768w, public/images/photos/hero-ramp-1280.webp 1280w, public/images/photos/hero-ramp-1920.webp 1920w" imagesizes="100vw">
+  <link rel="stylesheet" href="public/css/tokens.css">
+  <link rel="stylesheet" href="public/css/base.css">
+  <link rel="stylesheet" href="public/css/components.css">
+  <link rel="stylesheet" href="public/css/sections.css">
+  <script src="public/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+
+<!-- Логотип: один символ на всю страницу, цвет берётся из окружения -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 1881 416"><path d="M1316.41 84.9732C1339.08 84.9732 1359.51 90.0289 1377.7 100.14C1395.9 110.252 1410.36 124.527 1421.1 142.965C1431.54 161.404 1436.76 183.262 1436.76 208.541C1436.76 233.522 1431.54 255.232 1421.1 273.67C1410.36 292.109 1395.9 306.384 1377.7 316.495C1359.51 326.904 1339.08 332.109 1316.41 332.109C1295.23 332.109 1277.19 327.648 1262.28 318.726C1247.07 309.804 1235.43 296.272 1227.38 278.131C1219.33 259.99 1215.3 236.793 1215.3 208.541C1215.3 180.586 1219.48 157.389 1227.83 138.95C1236.18 120.809 1247.96 107.278 1263.17 98.356C1278.38 89.4342 1296.13 84.9732 1316.41 84.9732ZM1304.33 142.073C1293 142.073 1282.71 144.75 1273.46 150.103C1264.22 155.456 1256.91 163.039 1251.54 172.853C1245.87 182.965 1243.04 194.861 1243.04 208.541C1243.04 222.518 1245.87 234.414 1251.54 244.228C1256.91 254.042 1264.22 261.626 1273.46 266.979C1282.71 272.332 1293 275.009 1304.33 275.009C1315.96 275.009 1326.4 272.332 1335.65 266.979C1344.89 261.626 1352.35 254.042 1358.02 244.228C1363.39 234.414 1366.07 222.518 1366.07 208.541C1366.07 194.861 1363.39 182.965 1358.02 172.853C1352.35 163.039 1344.89 155.456 1335.65 150.103C1326.4 144.75 1315.96 142.073 1304.33 142.073ZM1244.38 2V137.166L1239.91 208.095L1241.25 279.47V328.54H1174.59V2H1244.38Z" fill="currentColor"></path><path d="M746.348 330.027C723.681 330.027 703.25 324.971 685.056 314.86C666.862 304.748 652.396 290.473 641.659 272.035C631.22 253.596 626 231.738 626 206.459C626 181.478 631.22 159.768 641.659 141.33C652.396 122.891 666.862 108.616 685.056 98.5047C703.25 88.0959 723.681 82.8915 746.348 82.8915C767.525 82.8915 785.57 87.3524 800.483 96.2742C815.694 105.196 827.326 118.728 835.379 136.869C843.432 155.01 847.459 178.207 847.459 206.459C847.459 234.414 843.283 257.611 834.932 276.05C826.581 294.191 814.799 307.722 799.588 316.644C784.377 325.566 766.63 330.027 746.348 330.027ZM758.428 272.927C769.762 272.927 780.052 270.25 789.298 264.897C798.544 259.544 805.852 251.961 811.22 242.147C816.887 232.035 819.721 220.139 819.721 206.459C819.721 192.482 816.887 180.586 811.22 170.772C805.852 160.958 798.544 153.374 789.298 148.021C780.052 142.668 769.762 139.991 758.428 139.991C746.796 139.991 736.357 142.668 727.111 148.021C717.864 153.374 710.408 160.958 704.741 170.772C699.372 180.586 696.688 192.482 696.688 206.459C696.688 220.139 699.372 232.035 704.741 242.147C710.408 251.961 717.864 259.544 727.111 264.897C736.357 270.25 746.796 272.927 758.428 272.927ZM818.379 413V277.834L822.852 206.905L821.51 135.53V86.4602H888.172V413H818.379Z" fill="currentColor"></path><path d="M1013.89 332.151C993.905 332.151 976.01 328.285 960.202 320.553C944.692 312.82 932.613 301.073 923.963 285.311C915.313 269.252 910.989 248.88 910.989 224.197V88.5844H980.782V213.936C980.782 233.862 984.957 248.583 993.309 258.1C1001.96 267.319 1014.04 271.929 1029.55 271.929C1040.28 271.929 1049.83 269.698 1058.18 265.237C1066.53 260.479 1073.09 253.341 1077.87 243.825C1082.64 234.011 1085.02 221.817 1085.02 207.245V88.5844H1154.82V328.582H1088.6V262.561L1100.68 281.743C1092.63 298.397 1080.7 311.036 1064.89 319.66C1049.38 327.987 1032.38 332.151 1013.89 332.151Z" fill="currentColor"></path><path d="M1585.04 332.151C1559.39 332.151 1536.57 326.798 1516.59 316.092C1496.9 305.385 1481.24 290.813 1469.61 272.375C1458.28 253.639 1452.61 232.375 1452.61 208.583C1452.61 184.494 1458.28 163.231 1469.61 144.792C1481.24 126.056 1496.9 111.484 1516.59 101.075C1536.57 90.3688 1559.39 85.0157 1585.04 85.0157C1610.39 85.0157 1633.06 90.3688 1653.04 101.075C1673.02 111.484 1688.68 125.908 1700.02 144.346C1711.35 162.785 1717.02 184.197 1717.02 208.583C1717.02 232.375 1711.35 253.639 1700.02 272.375C1688.68 290.813 1673.02 305.385 1653.04 316.092C1633.06 326.798 1610.39 332.151 1585.04 332.151ZM1585.04 275.051C1596.67 275.051 1607.11 272.375 1616.36 267.022C1625.6 261.668 1632.91 254.085 1638.28 244.271C1643.65 234.159 1646.33 222.264 1646.33 208.583C1646.33 194.606 1643.65 182.71 1638.28 172.896C1632.91 163.082 1625.6 155.498 1616.36 150.145C1607.11 144.792 1596.67 142.116 1585.04 142.116C1573.41 142.116 1562.97 144.792 1553.72 150.145C1544.47 155.498 1537.02 163.082 1531.35 172.896C1525.98 182.71 1523.3 194.606 1523.3 208.583C1523.3 222.264 1525.98 234.159 1531.35 244.271C1537.02 254.085 1544.47 261.668 1553.72 267.022C1562.97 272.375 1573.41 275.051 1585.04 275.051Z" fill="currentColor"></path><path d="M1823.44 329.963C1795.11 329.963 1773.03 322.826 1757.23 308.551C1741.42 293.978 1733.51 272.417 1733.51 243.867V33.3115H1803.31V242.975C1803.31 253.086 1805.99 260.967 1811.36 266.618C1816.73 271.971 1824.04 274.648 1833.28 274.648C1844.32 274.648 1853.71 271.674 1861.47 265.726L1880.26 314.796C1873.1 319.852 1864.45 323.718 1854.31 326.394C1844.47 328.773 1834.18 329.963 1823.44 329.963ZM1715.25 145.281L1715.92 91.7496H1863.26V145.281H1715.25Z" fill="currentColor"></path><path d="M492.641 230.332C494.489 222.949 501.88 190.282 493.565 149.125C490.238 133.068 477.488 74.5625 422.422 34.3283C409.302 24.7311 372.345 -1.47652 319.311 0.369089C306.006 0.738211 266.462 3.87574 229.32 32.6672C199.569 55.7373 187.004 83.4214 182.014 94.6797C163.905 135.468 167.416 172.195 169.264 185.668C176.286 235.684 203.819 267.613 214.167 278.502L351.094 414.708H456.423C436.835 395.145 417.248 375.581 397.66 356.018C440.9 337.746 479.89 282.747 492.641 230.332ZM407.639 245.466C396.367 267.798 381.584 280.901 378.258 283.854C366.986 293.636 355.714 299.727 345.551 303.787C319.496 277.764 293.441 251.741 267.386 225.718C260.918 218.151 249.277 202.463 245.027 179.578C243.548 171.457 236.526 128.639 266.831 98.0017C271.266 93.3877 290.299 75.3008 319.865 73.8243C350.355 72.3478 371.605 89.512 380.845 97.2635C413.552 124.025 419.465 161.491 420.759 171.088C425.933 208 412.259 236.238 407.639 245.466Z" fill="currentColor"></path><path d="M271.451 378.165C248.353 387.947 222.852 393.299 196.243 393.299C87.9582 393.299 0.18457 304.894 0.18457 195.819C0.18457 86.7436 84.2625 0.18457 192.547 0.18457C200.678 0.18457 208.809 0.738253 216.755 1.66106L155.775 75.4854C108.1 93.3878 74.0992 139.713 74.0992 193.789C74.0992 263.737 130.644 320.398 200.493 320.398C204.559 320.398 208.624 320.213 212.689 319.844L271.451 378.165Z" fill="currentColor"></path></symbol></svg>
+
+<!-- ============ ШАПКА ============ -->
+<header class="header is-over-hero" id="header">
+  <div class="wrap header__row">
+    <a class="header__logo" href="#top" aria-label="Qubot, в начало страницы"><svg viewBox="0 0 1881 416" aria-hidden="true"><use href="#logo"/></svg></a>
+    <nav class="header__nav" aria-label="Разделы">
+      <a href="#software">ПО</a>
+      <a href="#robots">Роботы</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#mission">Отчёт</a>
+      <a href="#tests">Испытания</a>
+      <a href="#security">Безопасность</a>
+      <a href="#pricing">Цены</a>
+      <a href="#company">О нас</a>
+      <a class="btn header__cta" href="#contact">Обсудить пилот</a>
+    </nav>
+    <details class="menu" id="menu">
+      <summary aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></summary>
+      <nav class="menu__panel" aria-label="Разделы">
+        <a href="#software">ПО</a>
+        <a href="#robots">Роботы</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#mission">Отчёт о миссии</a>
+        <a href="#tests">Испытания</a>
+        <a href="#security">Безопасность</a>
+        <a href="#pricing">Цены</a>
+        <a href="#company">О нас</a>
+        <a class="btn btn--solid" href="#contact">Обсудить пилот</a>
       </nav>
-      <a class="header-contact" href="#contact">
-        Обсудить проект
-        <span>
-          ↗
-        </span>
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Открыть меню">
-        <span>
-        </span>
-        <span>
-        </span>
-      </button>
-    </header>
-    <main id="main">
-      <section class="hero wrap">
-        <div class="hero-copy">
-          <div class="eyebrow">
-            <span class="status-dot">
-            </span>
-            АВТОНОМНАЯ НАВИГАЦИЯ И ВИДЕОАНАЛИТИКА
-          </div>
-          <h1>
-            Автономное
-            <br>
-            патрулирование
-            <br>
-            <span>
-              и инспекция объектов
-            </span>
-          </h1>
-          <p class="hero-description">
-            Роботы-собаки с российским ПО автономной навигации выполняют обходы по расписанию, выявляют нарушения и собирают данные об объекте. Оператор получает события с фото, временем и привязкой к карте.
-          </p>
-          <div class="hero-actions">
-            <a class="button dark" href="#contact">
-              Подобрать решение
-              <span>
-                ↗
-              </span>
-            </a>
-            <a class="text-link" href="#video">
-              Смотреть ПО · 2:25
-              <span>
-                ▷
-              </span>
-            </a>
-          </div>
-          <a class="hero-foot registry-hero" href="#registry">
-            <span class="mini-icon">
-              ✓
-            </span>
-            <span>
-              <b>
-                Включено в реестр российского ПО
-              </b>
-              <br>
-              Развёртывание в контуре заказчика
-            </span>
-            <span class="registry-arrow">
-              ↗
-            </span>
-          </a>
-        </div>
-        <div class="hero-visual">
-          <div class="visual-top">
-            <span>
-              AUTONOMOUS NAVIGATION
-            </span>
-            <span class="visual-code">
-              01—05
-            </span>
-          </div>
-          <div class="hero-grid" aria-hidden="true">
-          </div>
-          <div class="orbit orbit-one" aria-hidden="true">
-          </div>
-          <div class="orbit orbit-two" aria-hidden="true">
-          </div>
-          <div class="hero-label">
-            <span class="status-dot">
-            </span>
-            ГОТОВ К МИССИИ
-          </div>
-          <img class="hero-robot" src="public/images/m1.webp" srcset="public/images/m1-640.webp 640w, public/images/m1.webp 1000w" sizes="(max-width: 720px) 88vw, 570px" width="1000" height="1000" alt="Шагающая робособака Inchbot M1" fetchpriority="high" decoding="async">
-          <div class="robot-callout">
-            <span class="callout-line">
-            </span>
-            <b>
-              LiDAR + компьютерное зрение
-            </b>
-            <span>
-              Ориентация без обязательного GNSS
-            </span>
-          </div>
-          <div class="visual-bottom">
-            <div>
-              <span>
-                ШАГАЮЩАЯ ПЛАТФОРМА
-              </span>
-              <strong>
-                Inchbot M1
-              </strong>
-            </div>
-            <a href="#models" aria-label="Узнать о моделях робособак">
-              ↗
-            </a>
-          </div>
-        </div>
-      </section>
-      <section id="video" class="section wrap video-section video-second-screen cases-second-screen">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow muted">
-              КЕЙСЫ И ПИЛОТНЫЕ ПРОЕКТЫ
-            </div>
-            <h2>
-              Кейсы и пилотные
-              <br>
-              проекты.
-            </h2>
-          </div>
-          <p>
-            В видео представлены разные кейсы и сценарии применения роботов: автономные обходы, инспекция объектов, работа по маршрутам и видеоаналитика.
-          </p>
-        </div>
-        <div class="case-overview-video">
-          <figure class="video-card">
-            <div class="video-frame">
-              <video id="software-video" controls playsinline preload="none" poster="public/images/overview-poster.webp" aria-label="Видеообзор ПО автономной навигации" aria-describedby="software-caption">
-                <source src="public/video/qubot-software.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-                <a href="public/video/qubot-software.mp4">
-                  Открыть обзор ПО
-                </a>
-              </video>
-              <button type="button" class="video-play-button" data-play="software-video" aria-label="Воспроизвести обзор ПО">
-                <span aria-hidden="true">
-                  ▶
-                </span>
-                <b>
-                  Смотреть обзор ПО
-                </b>
-              </button>
-              <span class="video-status" data-video-status="software-video" role="status">
-              </span>
-            </div>
-            <figcaption id="software-caption">
-              <span>
-                <i class="status-dot">
-                </i>
-                ОБЗОР ПО АВТОНОМНОЙ НАВИГАЦИИ
-              </span>
-              <b>
-                02:25 · со звуком
-              </b>
-            </figcaption>
-          </figure>
-        </div>
-        <a class="text-link more-cases-link" href="#cases">
-          Другие кейсы и испытания
-          <span>
-            ↓
-          </span>
-        </a>
-      </section>
-      <div class="proof-strip wrap">
-        <div>
-          <strong>
-            5 платформ
-          </strong>
-          <span>
-            Inchbot и Unitree
-          </span>
-        </div>
-        <div>
-          <strong>
-            От 13 моделей CV
-          </strong>
-          <span>
-            + VLM-анализ событий
-          </span>
-        </div>
-        <div>
-          <strong>
-            Несколько этажей
-          </strong>
-          <span>
-            Автономный подъём и спуск
-          </span>
-        </div>
-        <div class="proof-note">
-          <span class="seal">
-            ✓
-          </span>
-          <span>
-            Испытано в Центре
-            <br>
-            робототехники МИК
-          </span>
-        </div>
-      </div>
-      <section id="platform" class="section wrap">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow muted">
-              01 / ПРОГРАММНАЯ ПЛАТФОРМА
-            </div>
-            <h2>
-              Автономная навигация
-              <br>
-              и видеоаналитика.
-            </h2>
-          </div>
-          <p>
-            Маршруты, распознавание событий и журнал обходов в единой системе управления объектом.
-          </p>
-        </div>
-        <div class="platform-panel">
-          <div class="platform-copy">
-            <div class="platform-tabs" role="tablist" aria-label="Возможности ПО">
-              <button role="tab" id="tab-patrol" aria-selected="true" aria-controls="feature-panel" data-feature="patrol">
-                <span>
-                  01
-                </span>
-                Автономный патруль
-                <span class="tab-arrow">
-                  ↗
-                </span>
-              </button>
-              <button role="tab" id="tab-vision" aria-selected="false" aria-controls="feature-panel" data-feature="vision" tabindex="-1">
-                <span>
-                  02
-                </span>
-                Видеоаналитика
-                <span class="tab-arrow">
-                  ↗
-                </span>
-              </button>
-              <button role="tab" id="tab-data" aria-selected="false" aria-controls="feature-panel" data-feature="data" tabindex="-1">
-                <span>
-                  03
-                </span>
-                Сбор данных
-                <span class="tab-arrow">
-                  ↗
-                </span>
-              </button>
-            </div>
-            <div id="feature-panel" role="tabpanel" aria-labelledby="tab-patrol" tabindex="0">
-              <h3 id="feature-title">
-                Автономные обходы
-                <br>
-                по расписанию.
-              </h3>
-              <p id="feature-description">
-                Обходы по расписанию, контрольные точки и возврат на зарядку. Робот сам поднимается и спускается по лестницам, переключается между картами этажей и продолжает миссию при кратковременной потере связи.
-              </p>
-              <div id="feature-tags" class="feature-tags">
-                <span>
-                  LiDAR + IMU
-                </span>
-                <span>
-                  Несколько этажей
-                </span>
-                <span>
-                  Работа без GNSS
-                </span>
-              </div>
-            </div>
-            <a class="platform-link" href="https://qubot.ru/razrabotka" target="_blank" rel="noopener">
-              Узнать о платформе
-              <span>
-                ↗
-              </span>
-            </a>
-          </div>
-          <div class="mission-demo" aria-label="Интерактивная иллюстрация возможностей платформы">
-            <div class="demo-top">
-              <span>
-                <i class="status-dot">
-                </i>
-                МОНИТОРИНГ МИССИИ
-              </span>
-              <span class="demo-badge">
-                ДЕМОНСТРАЦИЯ
-              </span>
-            </div>
-            <div class="map" data-mode="patrol">
-              <svg viewBox="0 0 620 380" role="img" aria-label="Схематичная карта объекта и маршрут робота">
-                <defs>
-                  <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-                    <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#303536" stroke-width=".7"/>
-                  </pattern>
-                </defs>
-                <rect width="620" height="380" fill="url(#grid)"/>
-                <g class="buildings" fill="#333738" stroke="#515757">
-                  <path d="M82 80h130v88H82z"/>
-                  <path d="M280 58h220v72H280z"/>
-                  <path d="M302 185h110v112H302z"/>
-                  <path d="M480 222h70v90h-70z"/>
-                  <path d="M90 258h132v61H90z"/>
-                </g>
-                <g fill="#899392" font-family="Arial" font-size="10">
-                  <text x="111" y="127">
-                    КОРПУС А
-                  </text>
-                  <text x="356" y="100">
-                    КОРПУС Б
-                  </text>
-                  <text x="326" y="244">
-                    СКЛАД
-                  </text>
-                  <text x="116" y="294">
-                    ПАРКОВКА
-                  </text>
-                </g>
-                <path class="route-shadow" d="M55 210 L55 48 L246 48 L246 154 L548 154 L548 342 L254 342 L254 210 Z"/>
-                <path class="route" d="M55 210 L55 48 L246 48 L246 154 L548 154 L548 342 L254 342 L254 210 Z"/>
-                <g class="checkpoints" fill="#1e2623" stroke="#b8f99a" stroke-width="2">
-                  <circle cx="55" cy="48" r="5"/>
-                  <circle cx="246" cy="154" r="5"/>
-                  <circle cx="548" cy="342" r="5"/>
-                  <circle cx="254" cy="210" r="5"/>
-                </g>
-                <g class="map-robot">
-                  <circle cx="55" cy="210" r="23" fill="#b8f99a" opacity=".13"/>
-                  <circle cx="55" cy="210" r="12" fill="#b8f99a"/>
-                  <path d="m50 213 5-9 5 9-5-2z" fill="#172018"/>
-                </g>
-                <g class="vision-mark">
-                  <rect x="432" y="143" width="29" height="55" rx="3" stroke="#b8f99a" fill="none" stroke-width="2"/>
-                  <text x="425" y="132" fill="#b8f99a" font-size="11">
-                    ЧЕЛОВЕК · 96%
-                  </text>
-                </g>
-                <g class="data-cloud" fill="#8da7ff">
-                  <circle cx="90" cy="80" r="3"/>
-                  <circle cx="103" cy="90" r="2"/>
-                  <circle cx="125" cy="80" r="2"/>
-                  <circle cx="148" cy="88" r="3"/>
-                  <circle cx="170" cy="81" r="2"/>
-                  <circle cx="194" cy="93" r="3"/>
-                  <circle cx="210" cy="112" r="2"/>
-                  <circle cx="202" cy="142" r="3"/>
-                  <circle cx="180" cy="159" r="2"/>
-                  <circle cx="155" cy="164" r="3"/>
-                  <circle cx="130" cy="156" r="2"/>
-                  <circle cx="102" cy="165" r="3"/>
-                  <circle cx="81" cy="138" r="2"/>
-                  <circle cx="85" cy="110" r="2"/>
-                </g>
-              </svg>
-              <div class="map-scale">
-                N ↑
-                <span>
-                  СХЕМА ОБЪЕКТА
-                </span>
-                ━ 25 м
-              </div>
-            </div>
-            <div class="demo-event">
-              <span class="event-icon" id="demo-icon">
-                ✓
-              </span>
-              <div>
-                <strong id="demo-event-title">
-                  Контрольная точка пройдена
-                </strong>
-                <span id="demo-event-description">
-                  Корпус А · фото и координаты сохранены
-                </span>
-              </div>
-              <span class="demo-time">
-                14:32
-              </span>
-            </div>
-            <div class="demo-bottom">
-              <span>
-                Иллюстрация интерфейса, не трансляция с объекта
-              </span>
-              <button id="demo-next" aria-label="Показать следующую возможность">
-                Следующий сценарий →
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="workflow">
-          <span>
-            <b>
-              01
-            </b>
-            Строит карту
-          </span>
-          <i>
-            →
-          </i>
-          <span>
-            <b>
-              02
-            </b>
-            Проходит маршрут
-          </span>
-          <i>
-            →
-          </i>
-          <span>
-            <b>
-              03
-            </b>
-            Фиксирует событие
-          </span>
-          <i>
-            →
-          </i>
-          <span>
-            <b>
-              04
-            </b>
-            Передаёт оператору
-          </span>
-        </div>
-      </section>
-      <section id="applications" class="section applications-section">
-        <div class="wrap">
-          <div class="section-heading">
-            <div>
-              <div class="eyebrow muted">
-                СФЕРЫ ПРИМЕНЕНИЯ
-              </div>
-              <h2>
-                Где применяются
-                <br>
-                роботы-собаки
-              </h2>
-            </div>
-            <p>
-              Подбираем робота, сценарии обходов и оборудование под условия объекта — от частного участка до промышленной площадки.
-            </p>
-          </div>
-          <div class="applications-grid">
-            <article>
-              <div class="application-top">
-                <span class="application-type">
-                  ДЛЯ ФИЗИЧЕСКИХ ЛИЦ
-                </span>
-                <span>
-                  01
-                </span>
-              </div>
-              <h3>
-                Частные территории
-              </h3>
-              <p>
-                Обход участков, загородных домов и частных владений. Контроль периметра и въездов, фиксация людей, транспорта и изменений на территории.
-              </p>
-              <div class="application-tasks">
-                <span>
-                  Периметр
-                </span>
-                <span>
-                  Въезды
-                </span>
-                <span>
-                  Обходы по расписанию
-                </span>
-              </div>
-            </article>
-            <article>
-              <div class="application-top">
-                <span class="application-type">
-                  ПРОИЗВОДСТВО
-                </span>
-                <span>
-                  02
-                </span>
-              </div>
-              <h3>
-                Промышленные объекты
-              </h3>
-              <p>
-                Инспекция оборудования и коммуникаций, контроль СИЗ и визуальных повреждений. Подключение тепловизоров, газоанализаторов и других датчиков.
-              </p>
-              <div class="application-tasks">
-                <span>
-                  Инспекция
-                </span>
-                <span>
-                  СИЗ
-                </span>
-                <span>
-                  Мониторинг среды
-                </span>
-              </div>
-            </article>
-            <article>
-              <div class="application-top">
-                <span class="application-type">
-                  ТОРГОВАЯ НЕДВИЖИМОСТЬ
-                </span>
-                <span>
-                  03
-                </span>
-              </div>
-              <h3>
-                Торговые центры
-              </h3>
-              <p>
-                Регулярные обходы торговых галерей, общих и служебных зон, в том числе после закрытия. Контроль проходов и фиксация нештатных событий.
-              </p>
-              <div class="application-tasks">
-                <span>
-                  Общие зоны
-                </span>
-                <span>
-                  Ночные обходы
-                </span>
-                <span>
-                  Служебные помещения
-                </span>
-              </div>
-            </article>
-            <article>
-              <div class="application-top">
-                <span class="application-type">
-                  ЛОГИСТИКА
-                </span>
-                <span>
-                  04
-                </span>
-              </div>
-              <h3>
-                Склады и логистические комплексы
-              </h3>
-              <p>
-                Обход складских помещений, зон хранения и прилегающих площадок. Фотофиксация состояния объекта и контроль изменений между обходами.
-              </p>
-              <div class="application-tasks">
-                <span>
-                  Зоны хранения
-                </span>
-                <span>
-                  Площадки
-                </span>
-                <span>
-                  Контроль изменений
-                </span>
-              </div>
-            </article>
-            <article>
-              <div class="application-top">
-                <span class="application-type">
-                  ДЕЛОВЫЕ И УЧЕБНЫЕ ОБЪЕКТЫ
-                </span>
-                <span>
-                  05
-                </span>
-              </div>
-              <h3>
-                Бизнес-центры и кампусы
-              </h3>
-              <p>
-                Патрулирование зданий и открытой территории по единому маршруту. Переходы между этажами и подключение к дверям, турникетам и лифтам.
-              </p>
-              <div class="application-tasks">
-                <span>
-                  Здания и территория
-                </span>
-                <span>
-                  Несколько этажей
-                </span>
-                <span>
-                  Системы доступа
-                </span>
-              </div>
-            </article>
-            <article>
-              <div class="application-top">
-                <span class="application-type">
-                  ИНЖЕНЕРНАЯ ИНФРАСТРУКТУРА
-                </span>
-                <span>
-                  06
-                </span>
-              </div>
-              <h3>
-                Инфраструктурные объекты
-              </h3>
-              <p>
-                Инспекция теплотрасс, коллекторов и инженерных коммуникаций. Сбор изображений и данных датчиков на участках, куда сложно регулярно направлять сотрудников.
-              </p>
-              <div class="application-tasks">
-                <span>
-                  Теплотрассы
-                </span>
-                <span>
-                  Коммуникации
-                </span>
-                <span>
-                  Сбор данных
-                </span>
-              </div>
-            </article>
-          </div>
-          <div class="applications-bottom">
-            <p>
-              Сценарии адаптируются под объект. Модель робота, маршруты, навесное оборудование и критерии контроля согласуем после изучения условий эксплуатации.
-            </p>
-            <a class="text-link" href="#contact">
-              Обсудить ваш объект
-              <span>
-                ↗
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section id="stairs-section" class="section mobility-section">
-        <div class="wrap">
-          <div class="section-heading">
-            <div>
-              <div class="eyebrow muted">
-                АВТОНОМНОСТЬ МЕЖДУ ЭТАЖАМИ
-              </div>
-              <h2>
-                Перемещение
-                <br>
-                без границ.
-              </h2>
-            </div>
-            <p>
-              ПО обеспечивает автономный подъём и спуск по лестницам. Робот сам переходит между этажами и переключает карты в рамках миссии.
-            </p>
-          </div>
-          <div class="mobility-layout">
-            <div class="mobility-copy">
-              <span class="mobility-tag">
-                ↑ ПОДЪЁМ &nbsp; / &nbsp; ↓ СПУСК
-              </span>
-              <h3>
-                Из корпуса в корпус.
-                <br>
-                С этажа на этаж.
-              </h3>
-              <p>
-                Лестницы, двери и проходные могут быть частью единого сценария патрулирования. Маршрут, ступени и точки взаимодействия настраиваем под объект.
-              </p>
-              <ul class="mobility-checks">
-                <li>
-                  Автономный подъём и спуск по лестницам
-                </li>
-                <li>
-                  Переключение между картами и этажами
-                </li>
-                <li>
-                  Действия в контрольных точках и возврат на зарядку
-                </li>
-              </ul>
-              <p class="mobility-note">
-                Геометрию лестниц, покрытие, нагрузку и допустимые режимы проверяем на выбранной платформе при внедрении.
-              </p>
-            </div>
-            <figure class="video-card stairs-video-card">
-              <div class="video-frame">
-                <video id="stairs-video" controls playsinline preload="none" poster="public/images/stairs-poster.webp" aria-label="Робособака автономно поднимается и спускается по лестнице" aria-describedby="stairs-caption">
-                  <source src="public/video/qubot-stairs.mp4" type="video/mp4">
-                  Ваш браузер не поддерживает видео.
-                  <a href="public/video/qubot-stairs.mp4">
-                    Открыть видео прохождения лестницы
-                  </a>
-                </video>
-                <button type="button" class="video-play-button" data-play="stairs-video" aria-label="Воспроизвести видео прохождения лестниц">
-                  <span aria-hidden="true">
-                    ▶
-                  </span>
-                  <b>
-                    Смотреть лестницы
-                  </b>
-                </button>
-                <span class="video-status" data-video-status="stairs-video" role="status">
-                </span>
-              </div>
-              <figcaption id="stairs-caption">
-                <span>
-                  <i class="status-dot">
-                  </i>
-                  ПРОХОЖДЕНИЕ ЛЕСТНИЦ
-                </span>
-                <b>
-                  00:50 · со звуком
-                </b>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="integration-heading">
-            <div>
-              <span class="eyebrow muted">
-                ИНТЕГРАЦИЯ С ИНФРАСТРУКТУРОЙ
-              </span>
-              <h3>
-                Объект открывает путь роботу.
-              </h3>
-            </div>
-            <p>
-              Можно подключить робота к оборудованию объекта и системам управления доступом.
-            </p>
-          </div>
-          <div class="integration-grid">
-            <article>
-              <span class="integration-icon" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <path d="M11 39V12h8v27M29 39V12h8v27M19 24h10M24 24l6-6M24 24l6 6"/>
-                </svg>
-              </span>
-              <span class="integration-number">
-                01
-              </span>
-              <h4>
-                Турникеты и СКУД
-              </h4>
-              <p>
-                Согласование доступа и прохождение контрольных точек в рамках миссии.
-              </p>
-            </article>
-            <article>
-              <span class="integration-icon" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <path d="M7 39V9h34v30M22 12v27M26 12v27M4 24h12m-5-5 5 5-5 5M44 24H32m5-5-5 5 5 5"/>
-                </svg>
-              </span>
-              <span class="integration-number">
-                02
-              </span>
-              <h4>
-                Автоматические двери
-              </h4>
-              <p>
-                Команда на открытие и проверка прохода перед продолжением маршрута.
-              </p>
-            </article>
-            <article>
-              <span class="integration-icon" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <path d="M9 41V7h30v34M13 41V17h22v24M24 18v22M17 12h14M17 29v-7m-3 3 3-3 3 3M31 28v7m-3-3 3 3 3-3"/>
-                </svg>
-              </span>
-              <span class="integration-number">
-                03
-              </span>
-              <h4>
-                Лифты
-              </h4>
-              <p>
-                Вызов, выбор этажа и переход на нужную карту после поездки.
-              </p>
-            </article>
-          </div>
-          <p class="integration-note">
-            Интеграции реализуются по ТЗ при наличии совместимых интерфейсов оборудования. Состав действий и условия доступа согласуются с заказчиком.
-          </p>
-        </div>
-      </section>
-      <section id="registry" class="section wrap registry-section">
-        <div class="registry-panel">
-          <div class="registry-symbol" aria-hidden="true">
-            <svg viewBox="0 0 80 90">
-              <path d="M40 5 70 17v28c0 20-15 32-30 40C25 77 10 65 10 45V17z"/>
-              <path d="m25 43 11 11 21-25"/>
-            </svg>
-            <span>
-              RU
-            </span>
-          </div>
-          <div class="registry-main">
-            <div class="eyebrow">
-              РОССИЙСКАЯ ПРОГРАММНАЯ ПЛАТФОРМА
-            </div>
-            <h2>
-              В реестре
-              <br>
-              российского ПО.
-            </h2>
-            <p>
-              Программный комплекс включён в Единый реестр российских программ для ЭВМ и баз данных. Разрабатываем и адаптируем решение под задачи вашего объекта.
-            </p>
-          </div>
-          <div class="registry-points">
-            <div>
-              <b>
-                Данные в вашем контуре
-              </b>
-              <span>
-                Серверная часть и архив материалов — у заказчика.
-              </span>
-            </div>
-            <div>
-              <b>
-                Управляемый доступ
-              </b>
-              <span>
-                Роли администратора и оператора, журнал действий.
-              </span>
-            </div>
-            <div>
-              <b>
-                Открытые интеграции
-              </b>
-              <span>
-                Подключение внешних систем и дополнительной аналитики.
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="models" class="section models-section">
-        <div class="wrap">
-          <div class="section-heading">
-            <div>
-              <div class="eyebrow muted">
-                02 / ВЫБЕРИТЕ ПЛАТФОРМУ
-              </div>
-              <h2>
-                Платформы для
-                <br>
-                автономной работы.
-              </h2>
-            </div>
-            <div class="heading-side">
-              <p>
-                Выберите платформу под условия объекта. Комплектацию и режимы движения согласуем по вашим маршрутам.
-              </p>
-            </div>
-          </div>
-          <div class="platform-use-notes">
-            <p>
-              <b>
-                Колёсно-шагающие платформы
-              </b>
-              <span>
-                Платформы повышенной проходимости для уличных объектов, протяжённых маршрутов и неровных участков.
-              </span>
-            </p>
-            <p>
-              <b>
-                Шагающие платформы
-              </b>
-              <span>
-                Преимущественно для работы внутри зданий: помещения, лестницы и переходы между этажами.
-              </span>
-            </p>
-          </div>
-          <p class="platform-use-footnote">
-            Проходимость и выбор модели зависят от покрытия, препятствий, нагрузки и сценария эксплуатации.
-          </p>
-          <div class="model-tabs" role="tablist" aria-label="Модели робособак" id="model-tabs">
-          </div>
-          <div class="model-detail" id="model-detail" role="tabpanel" aria-labelledby="model-tab-m1" tabindex="0">
-            <div class="model-image-box">
-              <span class="model-kind" id="model-kind">
-                ШАГАЮЩАЯ ПЛАТФОРМА
-              </span>
-              <img id="model-image" src="public/images/m1.webp" srcset="public/images/m1-640.webp 640w, public/images/m1.webp 1000w" sizes="(max-width: 720px) calc(100vw - 40px), 640px" alt="Inchbot M1" loading="lazy" decoding="async" decoding="async" width="1000" height="1000">
-              <span class="image-note" id="image-note">
-                Реальное оборудование. ПО подключается отдельно.
-              </span>
-            </div>
-            <div class="model-info">
-              <div class="model-info-top">
-                <span id="model-maker">
-                  INCHBOT
-                </span>
-                <span id="model-index">
-                  03 / 05
-                </span>
-              </div>
-              <h3 id="model-name">
-                M1
-              </h3>
-              <p id="model-desc">
-              </p>
-              <div id="model-specs" class="model-specs">
-              </div>
-              <div class="model-price-row">
-                <div>
-                  <span id="model-price-label">
-                    Платформа с НДС
-                  </span>
-                  <strong id="model-price">
-                  </strong>
-                </div>
-                <a id="model-buy" class="round-link" href="https://qubot.ru/catalog/roboty-sobaki/inchbot-m1" target="_blank" rel="noopener" aria-label="Подробнее о модели на qubot.ru">
-                  ↗
-                </a>
-              </div>
-              <a id="model-request" class="button dark" href="https://qubot.ru/catalog/roboty-sobaki/inchbot-m1" target="_blank" rel="noopener">
-                Обсудить эту модель
-                <span>
-                  ↗
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="models-note">
-            <span>
-              Цены платформ с НДС · ПО рассчитывается отдельно
-            </span>
-            <button class="inline-button" data-open="pricing-dialog">
-              Что входит в стоимость? ↗
-            </button>
-          </div>
-        </div>
-      </section>
-      <section id="equipment" class="section wrap equipment-section">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow muted">
-              НАВЕСНОЕ ОБОРУДОВАНИЕ
-            </div>
-            <h2>
-              Одна платформа.
-              <br>
-              Разные задачи.
-            </h2>
-          </div>
-          <p>
-            Установим дополнительные камеры, газоанализаторы и специализированные модули. Состав оборудования подбираем под то, что робот должен видеть, измерять или делать.
-          </p>
-        </div>
-        <figure class="payload-figure">
-          <div class="payload-image-scroll" tabindex="0" role="region" aria-label="Примеры навесного оборудования, на узком экране схема прокручивается горизонтально">
-            <img src="public/images/payloads.webp" width="973" height="413" loading="lazy" decoding="async" alt="Варианты навесного оборудования: пожарный модуль, инспекционные датчики, охранные камеры, разведывательные модули, манипулятор, грузовая платформа и геодезическое оборудование">
-          </div>
-          <figcaption>
-            <span>
-              ПРИМЕРЫ КОМПОНОВОК НАВЕСНОГО ОБОРУДОВАНИЯ
-            </span>
-            <span class="payload-scroll-hint">
-              ← Листайте схему →
-            </span>
-          </figcaption>
-        </figure>
-        <div class="equipment-grid">
-          <article>
-            <span>
-              01 / НАБЛЮДЕНИЕ
-            </span>
-            <h3>
-              Камеры и тепловизоры
-            </h3>
-            <p>
-              Дополнительные обзорные, поворотные и тепловизионные камеры для инспекции и наблюдения, в том числе в темноте.
-            </p>
-          </article>
-          <article>
-            <span>
-              02 / ИЗМЕРЕНИЯ
-            </span>
-            <h3>
-              Газоанализаторы и датчики
-            </h3>
-            <p>
-              Контроль газовой среды и других параметров объекта. Типы газов, чувствительность и сценарии измерений задаём в ТЗ.
-            </p>
-          </article>
-          <article>
-            <span>
-              03 / СПЕЦИАЛЬНЫЕ ЗАДАЧИ
-            </span>
-            <h3>
-              Лидары, RTK, манипуляторы
-            </h3>
-            <p>
-              3D-съёмка, геодезические задачи, работа с предметами и перевозка полезной нагрузки — с подходящим модулем.
-            </p>
-          </article>
-        </div>
-        <div class="equipment-bottom">
-          <p>
-            Иллюстрация показывает примеры модификаций. Массу, питание, интерфейсы и совместимость с конкретной моделью согласуем отдельно. Модули не входят в базовую стоимость платформы и ПО.
-          </p>
-          <a class="text-link" id="equipment-request" href="#contact">
-            Обсудить оборудование
-            <span>
-              ↓
-            </span>
-          </a>
-        </div>
-      </section>
-      <section id="software-pricing" class="software-pricing-section">
-        <div class="wrap">
-          <div class="section-heading">
-            <div>
-              <div class="eyebrow muted">
-                СТОИМОСТЬ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ
-              </div>
-              <h2>
-                Лицензии на ПО
-                <br>
-                автономной навигации.
-              </h2>
-            </div>
-            <p>
-              Две модели лицензирования — одна автономная платформа. Стоимость указана за одного робота.
-            </p>
-          </div>
-          <div class="software-pricing-grid">
-            <article class="license-card">
-              <span class="eyebrow muted">
-                ЕЖЕМЕСЯЧНАЯ ЛИЦЕНЗИЯ
-              </span>
-              <div class="license-amount">
-                70 000 ₽
-                <span>
-                  / месяц
-                </span>
-              </div>
-              <p>
-                На одну собаку
-              </p>
-              <ul>
-                <li>
-                  Использование ПО в оплаченный период
-                </li>
-                <li>
-                  Обновления и техническая поддержка
-                </li>
-                <li>
-                  Для пилота и поэтапного внедрения
-                </li>
-              </ul>
-              <button class="button dark" type="button" data-license="monthly">
-                Обсудить подписку
-                <span>
-                  →
-                </span>
-              </button>
-            </article>
-            <article class="license-card perpetual-card">
-              <span class="eyebrow">
-                БЕССРОЧНАЯ ЛИЦЕНЗИЯ
-              </span>
-              <div class="license-amount">
-                1 200 000 ₽
-                <span>
-                  однократно
-                </span>
-              </div>
-              <p>
-                На одну собаку
-              </p>
-              <ul>
-                <li>
-                  Бессрочное право на установленную версию ПО
-                </li>
-                <li>
-                  Техническая поддержка 12 месяцев
-                </li>
-                <li>
-                  Развёртывание в контуре заказчика
-                </li>
-              </ul>
-              <button class="button white" type="button" data-license="perpetual">
-                Обсудить бессрочную лицензию
-                <span>
-                  →
-                </span>
-              </button>
-            </article>
-          </div>
-          <p class="license-footnote">
-            Цены с НДС. Робот, навесное оборудование, зарядная станция, сервер и внедрение рассчитываются отдельно по конфигурации и ТЗ.
-          </p>
-        </div>
-      </section>
-      <section id="contact" class="section wrap contact-section">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow muted">
-              03 / ОБРАТНАЯ СВЯЗЬ
-            </div>
-            <h2>
-              Обсудим задачу
-              <br>
-              вашего объекта.
-            </h2>
-          </div>
-          <p>
-            Оставьте контакты и расскажите о задаче. Подберём платформу, навесное оборудование и сценарий внедрения.
-          </p>
-        </div>
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="contact-form-top">
-            <span class="eyebrow">
-              ЗАЯВКА В QUBOT
-            </span>
-            <span>
-              Укажите телефон или email для связи
-            </span>
-          </div>
-          <div id="contact-interest" class="contact-interest" hidden>
-          </div>
-          <input type="hidden" id="contact-model" name="model" value="">
-          <input type="hidden" id="contact-license" name="license" value="">
-          <div class="contact-fields">
-            <div class="contact-field">
-              <label for="contact-name">
-                Ваше имя
-                <span>
-                  *
-                </span>
-              </label>
-              <input id="contact-name" name="name" autocomplete="name" placeholder="Как к вам обращаться" maxlength="100" required>
-            </div>
-            <div class="contact-field">
-              <label for="contact-company">
-                Компания
-              </label>
-              <input id="contact-company" name="company" autocomplete="organization" placeholder="Название организации" maxlength="160">
-            </div>
-            <div class="contact-field">
-              <label for="contact-phone">
-                Телефон
-              </label>
-              <input id="contact-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 999 123-45-67" maxlength="40" aria-describedby="contact-contact-help">
-            </div>
-            <div class="contact-field">
-              <label for="contact-email">
-                Email
-              </label>
-              <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="name@company.ru" maxlength="254" aria-describedby="contact-contact-help">
-            </div>
-          </div>
-          <p id="contact-contact-help" class="contact-help">
-            Достаточно телефона или email. Кнопка «Открыть письмо» перенесёт заявку в вашу почтовую программу — проверьте текст и отправьте письмо на info@qubot.ru.
-          </p>
-          <div class="contact-field contact-message-field">
-            <label for="contact-message">
-              Ваша задача
-            </label>
-            <textarea id="contact-message" name="message" rows="4" maxlength="3000" placeholder="Что нужно автоматизировать? Расскажите об объекте и сценарии работы робота.">
-            </textarea>
-          </div>
-          <div class="contact-submit-row">
-            <label class="contact-consent">
-              <input type="checkbox" id="contact-consent" name="consent" required>
-              <span>
-                Разрешаю связаться со мной по указанным контактам для обсуждения заявки.
-              </span>
-            </label>
-            <button class="button blue" id="contact-submit" type="submit">
-              Открыть письмо
-              <span>
-                ↗
-              </span>
-            </button>
-          </div>
-          <p id="contact-status" class="contact-status" role="status" aria-live="polite" tabindex="-1">
-          </p>
-        </form>
-        <div class="contact-direct">
-          <span>
-            Или свяжитесь с нами напрямую
-          </span>
-          <a href="mailto:info@qubot.ru">
-            info@qubot.ru ↗
-          </a>
-          <a href="tel:+74996474546">
-            +7 499 647-45-46
-          </a>
-        </div>
-      </section>
-      <section id="cases" class="section cases-section">
-        <div class="wrap">
-          <div class="section-heading">
-            <div>
-              <div class="eyebrow muted">
-                04 / РЕАЛЬНЫЙ ОПЫТ
-              </div>
-              <h2>
-                Кейсы автономной
-                <br>
-                навигации.
-              </h2>
-            </div>
-            <p>
-              Проверяем решение на объектах: от обхода кампуса до сбора трёхмерных данных в промышленности.
-            </p>
-          </div>
-          <div class="case-grid">
-            <article class="case-main">
-              <div class="case-visual">
-                <img src="public/images/campus-pilot.webp" srcset="public/images/campus-pilot-640.webp 640w, public/images/campus-pilot.webp 1280w" sizes="(max-width: 720px) calc(100vw - 40px), 640px" alt="Робособака на территории кампуса, кадр из видео пилота" loading="lazy" decoding="async" width="1280" height="702">
-                <span>
-                  ПИЛОТ В КАМПУСЕ · КАДР ИЗ ВИДЕООБЗОРА
-                </span>
-              </div>
-              <div class="case-body">
-                <div class="eyebrow muted">
-                  КАМПУС / INCHBOT L1-W
-                </div>
-                <h3>
-                  Проект в крупном
-                  <br>
-                  образовательном учреждении.
-                </h3>
-                <p>
-                  Робот обходил территорию, распознавал людей и транспорт, фиксировал события на карте. При кратковременных потерях связи завершал маршрут автономно.
-                </p>
-                <div class="case-metrics">
-                  <div>
-                    <b>
-                      53
-                    </b>
-                    <span>
-                      обхода
-                    </span>
-                  </div>
-                  <div>
-                    <b>
-                      ≈25 км
-                    </b>
-                    <span>
-                      пройдено
-                    </span>
-                  </div>
-                  <div>
-                    <b>
-                      ≈80 ч
-                    </b>
-                    <span>
-                      автономной работы
-                    </span>
-                  </div>
-                </div>
-                <div class="case-actions">
-                  <button class="text-link" data-open="case-dialog">
-                    Подробности пилота
-                    <span>
-                      ↗
-                    </span>
-                  </button>
-                  <a class="text-link" href="public/docs/campus-patrol-case.pdf" download="Кейс_автономный_патруль_кампуса.pdf" type="application/pdf">
-                    Скачать кейс в PDF
-                    <span>
-                      ↓
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </article>
-            <div class="case-secondary">
-              <article class="case-small">
-                <img src="public/images/case-3d.webp" srcset="public/images/case-3d-640.webp 640w, public/images/case-3d.webp 1114w" sizes="(max-width: 720px) calc(100vw - 40px), 640px" alt="Сбор трёхмерной карты робособакой Inchbot L1" loading="lazy" decoding="async" width="1114" height="565">
-                <div>
-                  <div class="eyebrow muted">
-                    ИНСПЕКЦИЯ / INCHBOT L1
-                  </div>
-                  <h3>
-                    Промышленный объект
-                    <br>
-                    добывающей отрасли.
-                  </h3>
-                  <p>
-                    Сбор данных 3D-лидаром и построение трёхмерной карты промышленного объекта без участия персонала в обходе.
-                  </p>
-                  <a class="text-link" href="https://qubot.ru/razrabotka" target="_blank" rel="noopener">
-                    Кейс разработки
-                    <span>
-                      ↗
-                    </span>
-                  </a>
-                </div>
-              </article>
-              <article class="testing-card">
-                <span class="seal">
-                  ✓
-                </span>
-                <div>
-                  <div class="eyebrow">
-                    ЦЕНТР РОБОТОТЕХНИКИ МИК
-                  </div>
-                  <h3>
-                    Проверено движением.
-                  </h3>
-                  <p>
-                    L1 Edu, M1 и A2-W прошли испытания платформ: препятствия, лестницы, уклоны и движение с грузом.
-                  </p>
-                  <button class="text-link" data-open="testing-dialog">
-                    Об испытаниях
-                    <span>
-                      ↗
-                    </span>
-                  </button>
-                </div>
-              </article>
-            </div>
-          </div>
-          <p class="case-footnote">
-            Пилот кампуса: 14–28 сентября 2026 г. Это результаты конкретного маршрута и конфигурации, а не норматив нагрузки на один робот.
-          </p>
-        </div>
-      </section>
-      <section class="section wrap deployment-section">
-        <div>
-          <div class="eyebrow muted">
-            05 / ВНЕДРЕНИЕ
-          </div>
-          <h2>
-            Начнём с маршрута.
-            <br>
-            Подтвердим результат.
-          </h2>
-          <p>
-            На пилоте фиксируем критерии успеха: выполненные миссии, качество распознавания и число вмешательств оператора.
-          </p>
-          <a class="text-link" href="#contact">
-            Обсудить пилот
-            <span>
-              ↗
-            </span>
-          </a>
-        </div>
-        <ol class="deployment-steps">
-          <li>
-            <span>
-              01
-            </span>
-            <div>
-              <h3>
-                Обследование
-              </h3>
-              <p>
-                План территории, задачи, связь и место для зарядки.
-              </p>
-            </div>
-            <small>
-              1 неделя
-            </small>
-          </li>
-          <li>
-            <span>
-              02
-            </span>
-            <div>
-              <h3>
-                Подготовка
-              </h3>
-              <p>
-                Карты, маршруты, контрольные точки и аналитика.
-              </p>
-            </div>
-            <small>
-              2–3 недели
-            </small>
-          </li>
-          <li>
-            <span>
-              03
-            </span>
-            <div>
-              <h3>
-                Пилот на объекте
-              </h3>
-              <p>
-                Автономные миссии, отчёты и проверка условий.
-              </p>
-            </div>
-            <small>
-              около 10 дней
-            </small>
-          </li>
-          <li>
-            <span>
-              04
-            </span>
-            <div>
-              <h3>
-                Решение о внедрении
-              </h3>
-              <p>
-                Результаты пилота, состав системы и итоговое ТКП.
-              </p>
-            </div>
-            <small>
-              3–4 дня
-            </small>
-          </li>
-        </ol>
-      </section>
-      <section class="wrap faq-section">
-        <div class="eyebrow muted">
-          ЧАСТЫЕ ВОПРОСЫ
-        </div>
-        <div class="faq-grid">
-          <details>
-            <summary>
-              Робот полностью заменяет охранника?
-              <span>
-                +
-              </span>
-            </summary>
-            <p>
-              Робот берёт на себя регулярные обходы и сбор данных. Оценка происшествий, решения и реагирование остаются за людьми. Это дополнение к охране и стационарному видеонаблюдению.
-            </p>
-          </details>
-          <details>
-            <summary>
-              Что произойдёт без связи или GNSS?
-              <span>
-                +
-              </span>
-            </summary>
-            <p>
-              Робот использует LiDAR, IMU и одометрию; GNSS подключается дополнительно, когда сигнал достоверен. При кратковременной потере связи робот продолжает согласованную миссию и синхронизирует материалы после восстановления соединения. Условия проверяются на объекте.
-            </p>
-          </details>
-          <details>
-            <summary>
-              Где хранятся данные?
-              <span>
-                +
-              </span>
-            </summary>
-            <p>
-              Сервер можно развернуть в контуре заказчика. Доступы, сроки хранения, обработка изображений людей и интеграции согласуются при внедрении.
-            </p>
-          </details>
-          <details>
-            <summary>
-              Колёсная платформа справится с лестницами?
-              <span>
-                +
-              </span>
-            </summary>
-            <p>
-              Да. С ПО автономной навигации робот автономно поднимается и спускается по лестницам, переходит между этажами и переключает карты. L1-W и A2-W используют колёса на ровных участках и шагающее движение на препятствиях. Геометрию лестниц, уклоны, сцепление и нагрузку проверяем на выбранной платформе.
-            </p>
-          </details>
-        </div>
-      </section>
-      <section class="wrap final-cta">
-        <div>
-          <span class="eyebrow">
-            ПИЛОТНЫЙ ПРОЕКТ
-          </span>
-          <h2>
-            Начнём пилот
-            <br>
-            на вашем объекте.
-          </h2>
-          <p>
-            Подберём платформу, аналитику и сценарий пилота.
-          </p>
-        </div>
-        <a href="#contact" class="button white">
-          Обсудить пилот
-          <span>
-            ↓
-          </span>
-        </a>
-        <span class="cta-watermark" aria-hidden="true">
-          Q
-        </span>
-      </section>
-    </main>
-    <footer class="footer wrap">
+    </details>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ ПЕРВЫЙ ЭКРАН ============ -->
+<section class="hero" id="top">
+  <img class="hero__img" src="public/images/photos/hero-ramp-1920.webp" srcset="public/images/photos/hero-ramp-768.webp 768w, public/images/photos/hero-ramp-1280.webp 1280w, public/images/photos/hero-ramp-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Колёсно-шагающий робот Qubot на вершине наклонной платформы" fetchpriority="high">
+  <div class="wrap hero__body">
+    <div class="hero__main">
       <div>
-        <a class="brand" href="#" aria-label="Qubot — наверх">
-          <img src="public/images/logo.svg" width="122" height="35" alt="Qubot" loading="lazy" decoding="async">
-        </a>
-        <p>
-          Автономные системы для реальных задач.
-        </p>
+        <h1>Робот сам обходит объект, видит нарушения и сразу сообщает о них</h1>
+        <p class="hero__lead">Qubot это российское ПО автономного патруля и инспекции для роботов-собак Inchbot и Unitree. Поставляем робота вместе с ПО, настраиваем под объект, обучаем охрану.</p>
       </div>
-      <div class="footer-links">
-        <a href="https://qubot.ru" target="_blank" rel="noopener">
-          qubot.ru ↗
-        </a>
-        <a href="mailto:info@qubot.ru">
-          info@qubot.ru
-        </a>
-        <a href="tel:+74996474546">
-          +7 499 647-45-46
-        </a>
+      <div class="hero__actions">
+        <a class="btn btn--pill btn--pill-solid" href="#contact">Обсудить пилот</a>
+        <a class="btn btn--pill" href="#tests">Смотреть испытания</a>
       </div>
-      <div class="footer-bottom">
-        <span>
-          © 2026 АО «КЬЮ ГРУПП»
-        </span>
-        <span>
-          Москва · кластер «Ломоносов»
-        </span>
-        <button class="inline-button" data-open="pricing-dialog">
-          Цены и условия
-        </button>
-      </div>
-    </footer>
-    <dialog id="pricing-dialog" aria-labelledby="pricing-title" class="modal">
-      <div class="modal-header">
-        <h2 id="pricing-title">
-          Стоимость без сюрпризов
-        </h2>
-        <button class="close-modal" aria-label="Закрыть условия">
-          ×
-        </button>
-      </div>
-      <p>
-        Указаны цены представленных платформ и комплектаций. Стоимость ПО обновлена: 70 000 ₽/месяц или 1 200 000 ₽ за бессрочную лицензию на робота. Цены включают НДС. Комплектацию и итоговую стоимость фиксируем в ТКП.
-      </p>
-      <ul>
-        <li>
-          Платформы: Inchbot L1-W — 1 590 000 ₽; Inchbot L1 — 1 490 000 ₽; Inchbot M1 — 5 200 000 ₽; Unitree A2 Pro — 4 200 000 ₽; Unitree A2-W Pro — 4 890 000 ₽.
-        </li>
-        <li>
-          ПО на одного робота: 70 000 ₽/месяц с обновлениями и поддержкой либо 1 200 000 ₽ за бессрочную лицензию с техподдержкой на 12 месяцев.
-        </li>
-        <li>
-          Автоматическая станция M1: 540 000 ₽ за одну. Для остальных платформ — по запросу; количество станций определяем по сценарию эксплуатации.
-        </li>
-        <li>
-          Обследование, сервер, датчики, картографирование, пусконаладка и интеграции — по согласованному ТЗ.
-        </li>
+    </div>
+    <ul class="trust" aria-label="Подтверждения">
+      <li><a href="https://reestr.digital.gov.ru/reestr/16296431/" target="_blank" rel="noopener">В реестре российского ПО<span aria-hidden="true"> ↗</span></a></li>
+      <li><a href="https://i.moscow/company/54615046" target="_blank" rel="noopener">Участник Московского инновационного кластера<span aria-hidden="true"> ↗</span></a></li>
+      <li>В партнёрстве со Сколтехом</li>
+      <li>Аккредитованная ИТ-компания</li>
+      <li><a href="#tests">Испытания в Центре робототехники МИК</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ ЧТО ПОЛУЧАЕТ ЗАКАЗЧИК ============ -->
+<section class="section" id="value">
+  <div class="wrap value">
+    <figure class="value__photo">
+      <img class="photo" loading="lazy" src="public/images/photos/wheel-legged-800.webp" srcset="public/images/photos/wheel-legged-800.webp 800w, public/images/photos/wheel-legged-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 45vw" width="1600" height="1067" alt="Колёсно-шагающий робот на брусчатке">
+    </figure>
+    <div>
+      <h2>Что меняется на объекте</h2>
+      <ul class="value__list">
+        <li><h3>Обходы без пропусков</h3><p>Робот идёт по расписанию или по команде, разово или по кругу, днём и ночью.</p></li>
+        <li><h3>Доказательства по каждому событию</h3><p>Фото, время и точка на карте вместо устных докладов и ручных записей. В архиве есть поиск по фильтрам.</p></li>
+        <li><h3>У охраны больше времени на реагирование</h3><p>Робот сообщает сотрудникам о событиях, и они не тратят смены на однотипные обходы. Решают и выезжают на происшествие по-прежнему люди.</p></li>
+        <li><h3>Работа там, где человеку тяжело</h3><p>Лестницы и переходы между этажами, неровные поверхности, промышленные зоны, территории до 1 км².</p></li>
+        <li><h3>Без связи обход не прерывается</h3><p>Обход, анализ и запись идут автономно. Данные уходят на сервер, когда связь вернётся.</p></li>
       </ul>
-      <p>
-        Гарантия на оборудование — 12 месяцев. Поставка — до 35 рабочих дней после согласования заказа. Итоговый состав и цена фиксируются в ТКП.
-      </p>
-      <p class="fine-print">
-        Расчёт предварительный и не является публичной офертой.
-      </p>
-    </dialog>
-    <dialog id="case-dialog" aria-labelledby="case-title" class="modal">
-      <div class="modal-header">
-        <h2 id="case-title">
-          Автономный патруль кампуса
-        </h2>
-        <button class="close-modal" aria-label="Закрыть кейс">
-          ×
-        </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФУНКЦИИ ПО ============ -->
+<section class="section section--tint" id="software">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Что умеет ПО Qubot</h2>
+      <p>Логика миссий и интерфейс оператора отделены от программных интерфейсов производителей. Поэтому комплекс подключается к разным роботам с учётом их API, сенсоров и возможностей движения, и вы не привязаны к одному бренду.</p>
+    </div>
+    <ul class="functions">
+      <li>
+        <h3>Навигация и карты</h3>
+        <p>Робот строит одну или несколько карт объекта, в том числе по этажам, и сам переключается между ними. LiDAR, IMU и одометрия работают всегда. GNSS подключается, только если сигнал достоверен, поэтому робот работает и при подавлении или подмене сигнала.</p>
+      </li>
+      <li>
+        <h3>Миссии</h3>
+        <p>Маршруты и действия в контрольных точках, разовые и циклические обходы. Запуск по расписанию или по команде оператора.</p>
+      </li>
+      <li>
+        <h3>Препятствия и лестницы</h3>
+        <p>Объезжает препятствия и корректирует маршрут, сам поднимается и спускается по лестницам, переходит между этажами. Если локализация потеряна и это предусмотрено сценарием, восстанавливает положение и продолжает миссию.</p>
+      </li>
+      <li>
+        <h3>Автозарядка</h3>
+        <p>При снижении заряда робот возвращается на станцию, заряжается и продолжает обходы по расписанию. Подключать зарядку вручную не нужно.</p>
+      </li>
+      <li>
+        <h3>Интерфейс оператора</h3>
+        <p>Один веб-интерфейс: карта, маршруты, видеопотоки, журнал событий и состояние робота (заряд, связь, текущая миссия, локализация, сенсоры).</p>
+      </li>
+      <li>
+        <h3>Ручное управление и голос</h3>
+        <p>Перейти на ручное управление или остановить робота можно в любой момент. Голосом запускают миссию, ставят на паузу, отправляют в точку или на зарядку. Есть озвучивание сообщений и двусторонняя связь. При необходимости робота дооснащают аудиомодулем.</p>
+      </li>
+      <li>
+        <h3>Самодиагностика</h3>
+        <p>Система следит за актуальностью данных, состоянием батареи, камер и хранилища.</p>
+      </li>
+      <li>
+        <h3>Доработка под объект</h3>
+        <p>Обучаем дополнительные модели зрения, настраиваем события и уведомления, пишем сценарии автономной работы, подключаем внешние системы и датчики.</p>
+      </li>
+    </ul>
+
+    <div class="screens">
+      <figure>
+        <img class="photo" loading="lazy" src="public/images/ui/ops-panel.webp" width="1280" height="490" alt="Оперативная панель Qubot: видеопоток с робота и карта маршрута">
+        <figcaption class="caption">Оперативная панель: видео с робота и карта маршрута</figcaption>
+      </figure>
+      <figure>
+        <img class="photo" loading="lazy" src="public/images/ui/teleop.webp" width="1280" height="500" alt="Панель телеуправления с кнопкой аварийной остановки">
+        <figcaption class="caption">Телеуправление и аварийная остановка</figcaption>
+      </figure>
+      <figure>
+        <img class="photo" loading="lazy" src="public/images/ui/person-card.webp" width="1280" height="702" alt="Карточка обнаруженного человека: когда и где робот его видел">
+        <figcaption class="caption">Карточка человека: когда и где робот его видел</figcaption>
+      </figure>
+    </div>
+
+    <div class="split split--media">
+      <div>
+        <h3>Лестницы и переходы между этажами</h3>
+        <p>Робот сам проходит лестницу и переключается на карту следующего этажа, не прерывая миссию. Геометрию лестниц, покрытие и нагрузку проверяем на выбранной платформе при внедрении.</p>
+        <p class="note">Двери, турникеты и лифты подключаются по ТЗ, если у оборудования есть совместимые интерфейсы.</p>
       </div>
-      <p class="eyebrow muted">
-        14–28 СЕНТЯБРЯ 2026 / INCHBOT L1-W
-      </p>
-      <p>
-        На территории около 40 000 м² робот с ПО автономной навигации выполнил 53 обхода: около 25 км и 80 часов автономной работы.
-      </p>
-      <p>
-        Решение распознавало людей и транспорт, госномера, курение, граффити и контролировало освещённость с соответствующим оборудованием. События и положение робота отображались на карте.
-      </p>
-      <p>
-        Кратковременные потери связи возникали примерно в 5% обходов; во всех этих случаях робот завершал маршрут. Состав аналитики и условия относятся к конкретному пилоту.
-      </p>
-      <p class="fine-print">
-        Источники: приложенные материалы «Кейс: автономный патруль кампуса» и «Обзор ПО», видеообзор ПО. Площадь пилота не задаёт норматив количества роботов для других объектов.
-      </p>
-    </dialog>
-    <dialog id="testing-dialog" aria-labelledby="testing-title" class="modal">
-      <div class="modal-header">
-        <h2 id="testing-title">
-          Испытания платформ
-        </h2>
-        <button class="close-modal" aria-label="Закрыть информацию об испытаниях">
-          ×
-        </button>
+      <figure class="player">
+        <video controls preload="none" playsinline poster="public/images/posters/stairs-poster.webp" width="1280" height="720" aria-label="Робот проходит лестницы, 50 секунд">
+          <source src="public/video/stairs.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ВИДЕОАНАЛИТИКА ============ -->
+<section class="section" id="analytics">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Что робот распознаёт во время обхода</h2>
+      <p>13 обученных моделей компьютерного зрения и VLM-анализ. Состав функций и критерии качества распознавания согласуем с учётом условий объекта.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="table table--wide">
+        <tbody>
+          <tr><th scope="row">Безопасность и охрана</th><td>Люди и транспорт, в том числе в контролируемых и запрещённых зонах. Повторная идентификация людей по внешности и одежде. Госномера автомобилей. Скопления людей и признаки социальной напряжённости.</td></tr>
+          <tr><th scope="row">Порядок и пожарная безопасность</th><td>Курение в запрещённых местах. Дым и признаки задымления. Граффити и вандализм. Уровень освещённости (при наличии оборудования).</td></tr>
+          <tr><th scope="row">Промышленная инспекция</th><td>СИЗ, включая каски. Трещины и повреждения конструкций. Коррозия, повреждения изоляции и визуальные признаки утечек на трубопроводах.</td></tr>
+          <tr><th scope="row">Контроль изменений</th><td>Появление и исчезновение объектов, сравнение состояния территории между обходами.</td></tr>
+          <tr><th scope="row">VLM-анализ</th><td>На обычном языке отвечает на вопросы оператора о том, что происходит. После миссии анализирует весь обход и пишет итоговый отчёт. Роботом VLM не управляет.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subhead">Почему робот, а не только камеры</h3>
+    <div class="table-scroll">
+      <table class="table table--compare">
+        <thead>
+          <tr><th scope="col"><span class="visually-hidden">Критерий</span></th><th scope="col">Стационарные камеры</th><th scope="col">Робот с Qubot</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Зона контроля</th><td data-label="Камеры">Фиксированные зоны обзора, слепые участки остаются</td><td data-label="Робот">Весь маршрут, включая участки вне зоны камер</td></tr>
+          <tr><th scope="row">Детализация</th><td data-label="Камеры">Зависит от расстояния до камеры</td><td data-label="Робот">Робот подходит к контрольной точке и снимает с заданного ракурса</td></tr>
+          <tr><th scope="row">Привязка события</th><td data-label="Камеры">Кадр конкретной камеры</td><td data-label="Робот">Фото, время и точка на карте объекта</td></tr>
+          <tr><th scope="row">Сравнение между обходами</th><td data-label="Камеры">Нужно настраивать аналитику на каждой камере</td><td data-label="Робот">Контроль изменений по всему маршруту</td></tr>
+          <tr><th scope="row">Инфраструктура</th><td data-label="Камеры">Опоры, кабели и питание для каждой точки</td><td data-label="Робот">Зарядная станция и связь на объекте</td></tr>
+          <tr><th scope="row">Связь с людьми на месте</th><td data-label="Камеры">Нет</td><td data-label="Робот">Озвучивание сообщений и двусторонняя голосовая связь с аудиомодулем</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note note--after">Робот дополняет видеонаблюдение и охрану. Он берёт на себя регулярные обходы, решают и реагируют люди.</p>
+  </div>
+</section>
+
+<!-- ============ РОБОТЫ. Цены платформ меняются здесь ============ -->
+<section class="section" id="robots">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Роботы под задачу объекта</h2>
+      <p>Платформу, датчики и модули аналитики подбираем под условия объекта. Все пять моделей поднимаются по лестницам и работают с автоматической станцией, а миссии анализируются автоматически.</p>
+    </div>
+    <ul class="robots">
+      <li class="robot">
+        <div class="robot__text">
+          <h3>Inchbot L1 Edu</h3>
+          <p>Шагающая платформа для сервисных, логистических и инспекционных задач.</p>
+          <dl>
+            <div class="spec"><dt>Нагрузка</dt><dd>до 12 кг</dd></div>
+            <div class="spec"><dt>Оборудование</dt><dd>камеры, датчики, тепловизоры</dd></div>
+          </dl>
+          <p class="robot__price">1 490 000 ₽</p>
+        </div>
+        <img class="robot__img" loading="lazy" src="public/images/robots/l1-640.webp" srcset="public/images/robots/l1-640.webp 640w, public/images/robots/l1.webp 1000w" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Inchbot L1 Edu">
+      </li>
+      <li class="robot">
+        <div class="robot__text">
+          <h3>Inchbot L1-W</h3>
+          <p>Колёсно-шагающая платформа для обхода протяжённых территорий.</p>
+          <dl>
+            <div class="spec"><dt>Скорость</dt><dd>до 20 км/ч</dd></div>
+            <div class="spec"><dt>Нагрузка</dt><dd>до 12 кг</dd></div>
+            <div class="spec"><dt>Защита</dt><dd>IP54</dd></div>
+          </dl>
+          <p class="robot__price">1 590 000 ₽</p>
+        </div>
+        <img class="robot__img" loading="lazy" src="public/images/robots/l1w-640.webp" srcset="public/images/robots/l1w-640.webp 640w, public/images/robots/l1w.webp 1000w" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Inchbot L1-W">
+      </li>
+      <li class="robot">
+        <div class="robot__text">
+          <h3>Inchbot M1 (Охрбот)</h3>
+          <p>Для промышленных объектов и охраны периметра. Две батареи можно менять, не выключая робота.</p>
+          <dl>
+            <div class="spec"><dt>Защита</dt><dd>IP67</dd></div>
+            <div class="spec"><dt>Температура</dt><dd>от −20 до +55 °C</dd></div>
+            <div class="spec"><dt>Нагрузка</dt><dd>до 40 кг</dd></div>
+          </dl>
+          <p class="robot__price">5 200 000 ₽</p>
+        </div>
+        <img class="robot__img" loading="lazy" src="public/images/robots/m1-640.webp" srcset="public/images/robots/m1-640.webp 640w, public/images/robots/m1.webp 1000w" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Inchbot M1">
+      </li>
+      <li class="robot">
+        <div class="robot__text">
+          <h3>Unitree A2</h3>
+          <p>Четвероногая платформа для патруля, промышленной инспекции и мониторинга. Ходит по неровным поверхностям и лестницам, проходит препятствия.</p>
+          <dl>
+            <div class="spec"><dt>Нагрузка в движении</dt><dd>25 кг</dd></div>
+            <div class="spec"><dt>Работа без нагрузки</dt><dd>до 5 ч</dd></div>
+          </dl>
+          <p class="robot__price">от 3 400 000 ₽ <small>Pro: 4 200 000 ₽</small></p>
+        </div>
+        <img class="robot__img" loading="lazy" src="public/images/robots/a2-pro.webp" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Unitree A2">
+      </li>
+      <li class="robot">
+        <div class="robot__text">
+          <h3>Unitree A2-W</h3>
+          <p>Колёсно-шагающая платформа для регулярных обходов протяжённых территорий. Проходит препятствия и лестницы.</p>
+          <dl>
+            <div class="spec"><dt>Нагрузка в движении</dt><dd>25 кг</dd></div>
+            <div class="spec"><dt>Работа без нагрузки</dt><dd>до 5-6 ч</dd></div>
+          </dl>
+          <p class="robot__price">от 3 850 000 ₽ <small>Pro: 4 890 000 ₽</small></p>
+        </div>
+        <img class="robot__img" loading="lazy" src="public/images/robots/a2w-pro.webp" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Unitree A2-W">
+      </li>
+      <li class="robot robot--note">
+        <div class="robot__text">
+          <h3>Не знаете, какая модель подойдёт?</h3>
+          <p>По плану объекта считаем количество роботов и частоту обходов, подбираем модель и маршруты. Большой объект делим на несколько карт, робот переключается между ними сам.</p>
+          <a class="btn" href="#contact">Подобрать платформу</a>
+        </div>
+      </li>
+    </ul>
+    <p class="note note--after">Цены с НДС, действительны до 17 ноября 2026 года и обновляются два раза в месяц. ПО, зарядная станция и внедрение считаются отдельно. Гарантия на оборудование 12 месяцев, поставка до 35 рабочих дней после согласования заказа.</p>
+
+    <div class="split split--payloads">
+      <div>
+        <h3>Навесное оборудование</h3>
+        <p>Ставим дополнительные камеры для инспекции и наблюдения, в том числе в темноте: обзорные, поворотные, тепловизионные. Также газоанализаторы и другие датчики, лидары, RTK и манипуляторы.</p>
+        <p class="note">Массу, питание, интерфейсы и совместимость с конкретной моделью согласуем отдельно. Модули не входят в базовую стоимость платформы и ПО.</p>
       </div>
-      <p>
-        Центр испытаний робототехники Фонда «Московский инновационный кластер», территория Инновационного центра «Сколково», Москва.
-      </p>
-      <ul>
-        <li>
-          Unitree A2-W Standard — ПМИ и протокол №28 от 04.08.2026.
-        </li>
-        <li>
-          Inchbot L1 Edu — ПМИ и протокол №29 от 04.08.2026.
-        </li>
-        <li>
-          Inchbot M1 — ПМИ и протокол №30 от 04.08.2026.
-        </li>
-      </ul>
-      <p>
-        Проверены движение с грузом, препятствия, уклоны, лестницы, пересечённая местность, устойчивость и другие параметры платформ. Испытания платформ не гарантируют качество каждой модели видеоаналитики на новом объекте.
-      </p>
-      <p class="fine-print">
-        Источник: описание ПО автономной навигации от 02.11.2026.
-      </p>
-    </dialog>
-    <noscript>
-      <div class="noscript">
-        Для интерактивного подбора включите JavaScript. Модели и консультация доступны на
-        <a href="https://qubot.ru/catalog/roboty-sobaki">
-          qubot.ru
-        </a>
-        .
+      <figure>
+        <img class="photo photo--flat" loading="lazy" src="public/images/robots/payloads.webp" width="973" height="413" alt="Примеры компоновок навесного оборудования на роботе-собаке">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КЕЙСЫ. Новый кейс: скопировать <li class="case"> ============ -->
+<section class="section" id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Кейсы</h2>
+      <p>Проводили пилоты и тестирование на объектах заказчиков: в промышленности, городской инфраструктуре, на стройке и в охране территорий.</p>
+    </div>
+
+    <article class="case-main">
+      <img class="photo" loading="lazy" src="public/images/photos/campus-pilot.webp" width="448" height="470" alt="Колёсно-шагающий робот переходит пешеходную разметку на территории кампуса">
+      <div class="case-main__body">
+        <h3>Автономный патруль кампуса</h3>
+        <p>Территория около 40 000 м², робот Inchbot L1-W, маршрут около 450 м и примерно 4 обхода в будний день, с 14 по 28 сентября 2026 года. Робот распознавал людей и транспорт, госномера с привязкой к карте, курение и граффити, контролировал освещённость.</p>
+        <p>Связь кратковременно пропадала примерно в 5 % обходов. Во всех этих случаях робот завершил маршрут.</p>
+        <a class="doc" href="public/docs/campus-patrol-case.pdf" download="Qubot_кейс_патруль_кампуса.pdf"><span>Кейс и расчёт окупаемости<small>PDF, 280 КБ</small></span><span>Скачать</span></a>
       </div>
-    </noscript>
-  </body>
+      <div class="stats case-main__stats">
+        <div class="stat"><b>53</b><span>обхода за две недели</span></div>
+        <div class="stat"><b>≈25 км</b><span>пройдено</span></div>
+        <div class="stat"><b>≈80 ч</b><span>автономной работы</span></div>
+        <div class="stat"><b>≈5 %</b><span>обходов с потерей связи, все маршруты завершены</span></div>
+      </div>
+    </article>
+
+    <ul class="cases">
+      <li class="case">
+        <h3>Алтай-Кокс, НЛМК</h3>
+        <p class="case__robot">Inchbot L1-W Edu</p>
+        <p>Тестирование на промышленном объекте. Робот построил трёхмерную цифровую карту территории.</p>
+      </li>
+      <li class="case">
+        <h3>МОЭК</h3>
+        <p class="case__robot">Inchbot L1-W, пилот</p>
+        <p>Робот спустился в коллектор, обследовал его изнутри и построил трёхмерную карту объекта для дальнейшего анализа.</p>
+      </li>
+      <li class="case">
+        <h3>АО «Прорыв», Росатом</h3>
+        <p class="case__robot">Unitree A2-W, пилот</p>
+        <p>На площадке «Сириус» в Сочи отрабатывали сценарии автоматизированной работы на объекте сборки топливных элементов.</p>
+      </li>
+      <li class="case">
+        <h3>Охрана, «Сириус»</h3>
+        <p class="case__robot">Unitree A2-W</p>
+        <p>Испытывали охранного робота: автономный патруль, навигацию и мониторинг охраняемой территории.</p>
+      </li>
+      <li class="case case--photo">
+        <img loading="lazy" src="public/images/photos/mud-lidar-960.webp" width="960" height="600" alt="Робот с лидаром на раскисшем грунте">
+        <div>
+          <h3>ДСК «Автобан»</h3>
+          <p class="case__robot">Inchbot L1</p>
+          <p>Тестировали робота на объекте, на размытом грунте и в грязи.</p>
+        </div>
+      </li>
+      <li class="case case--photo">
+        <img loading="lazy" src="public/images/photos/case-3d.webp" width="362" height="565" alt="Робот на снегу на промышленном объекте">
+        <div>
+          <h3>Добывающая отрасль</h3>
+          <p class="case__robot">Inchbot L1</p>
+          <p>Робот собрал данные 3D-лидаром и построил трёхмерную карту промышленного объекта. Персонал в обходе не участвовал.</p>
+        </div>
+      </li>
+      <li class="case">
+        <h3>ВкусВилл</h3>
+        <p class="case__robot">Inchbot L1-W</p>
+        <p>Вместе тестировали робота зимой: с коробом на спине, на заснеженной уличной лестнице.</p>
+      </li>
+      <li class="case">
+        <h3>Департамент здравоохранения</h3>
+        <p class="case__robot">Inchbot M1</p>
+        <p>В здании робот проходил лестничные марши.</p>
+      </li>
+    </ul>
+
+    <div class="split split--media split--reverse">
+      <figure class="player">
+        <video controls preload="none" playsinline poster="public/images/posters/overview-poster.webp" width="1280" height="702" aria-label="Обзор ПО и кейсов Qubot, 2 минуты 25 секунд">
+          <source src="public/video/software-overview.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <div>
+        <h3>Обзор ПО и кейсов</h3>
+        <p>Интерфейс оператора, распознавание людей и госномеров, отчёты о миссиях и кадры с объектов. 2 минуты 25 секунд, со звуком.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПРИМЕР МИССИИ И ОТЧЁТ ============ -->
+<section class="section section--tint" id="mission">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Что робот сделал за один обход и что получил оператор</h2>
+      <p>Настоящий ночной патруль 8 октября 2026 года, с 02:40 до 02:52, робот ZSM-1. Почти весь маршрут рядом шёл человек с пультом, вероятно сопровождающий, но управление он не перехватывал. Такой отчёт Qubot формирует после миссии сам.</p>
+    </div>
+
+    <div class="mission">
+      <figure class="mission__map">
+        <img class="photo photo--flat" loading="lazy" src="public/images/mission/route-map.webp" width="1600" height="765" alt="Карта объекта с линией маршрута робота, 21 точкой и отметками наблюдений">
+        <figcaption class="caption">Путь робота на карте. Цвет линии меняется от синего к красному по времени. Цифрами отмечены точки маршрута, буквой Н наблюдения VLM, буквой E событие по телеметрии.</figcaption>
+      </figure>
+      <div class="stats mission__stats" style="--cols: 3">
+        <div class="stat"><b>21</b><span>точка маршрута пройдена</span></div>
+        <div class="stat"><b>382 м</b><span>за 11 мин 20 с</span></div>
+        <div class="stat"><b>0</b><span>вмешательств оператора</span></div>
+        <div class="stat"><b>100 %</b><span>времени локализация в норме</span></div>
+        <div class="stat"><b>58→55 %</b><span>заряд за обход</span></div>
+        <div class="stat"><b>9</b><span>наблюдений в отчёте</span></div>
+      </div>
+    </div>
+
+    <ol class="timeline">
+      <li>
+        <img loading="lazy" src="public/images/mission/f001.webp" width="480" height="270" alt="Кадр с камеры робота: входная зона ночью">
+        <div>
+          <time>00:25</time>
+          <h3>Старт</h3>
+          <p>Входная зона: велосипеды и самокат под навесом, автомобиль за воротами, освещение работает.</p>
+        </div>
+      </li>
+      <li>
+        <img loading="lazy" src="public/images/mission/f010.webp" width="480" height="270" alt="Кадр с камеры робота: крытый переход">
+        <div>
+          <time>05:22</time>
+          <h3>Крытый переход</h3>
+          <p>Упаковка и урна у стены, мелкий мусор на полу. Об упаковках отчёт советует сообщить хозяйственной службе.</p>
+        </div>
+      </li>
+      <li>
+        <img loading="lazy" src="public/images/mission/f022.webp" width="480" height="270" alt="Кадр с камеры робота: человек стоит вплотную перед роботом">
+        <div>
+          <time>с 09:47 до 10:43</time>
+          <h3>Человек на пути</h3>
+          <p>Человек с пультом, вероятно сопровождающий, встал вплотную перед камерой. Чтобы его объехать, робот четыре раза сдал назад и один раз постоял 10 с. До конца маршрута дошёл без вмешательства оператора.</p>
+        </div>
+      </li>
+      <li>
+        <img loading="lazy" src="public/images/mission/f031.webp" width="480" height="270" alt="Кадр с камеры робота: стеклянные панели у стены">
+        <div>
+          <time>11:45</time>
+          <h3>Финиш</h3>
+          <p>Большие стеклянные панели прислонены к стене. Проход свободен, но VLM отмечает риск падения, и отчёт рекомендует передать это хозяйственной службе.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="mission__download">
+      <a class="doc doc--main" href="public/docs/mission-report-zsm-1.pdf" download="Qubot_отчёт_о_миссии_ZSM-1.pdf"><span>Отчёт о прохождении миссии<small>Сводка, карта, наблюдения, рекомендации, хронология и кадры. PDF, 1,3 МБ</small></span><span>Скачать</span></a>
+      <p class="note">Время, расстояния и точки маршрута считаются по телеметрии. Описания кадров составляет VLM, она может ошибаться, поэтому важные выводы проверяют по самим кадрам. Статус этого отчёта «требует внимания»: система просит уточнить, сопровождал ли человек робота или шла проверка. В опубликованной копии скрыта служебная информация.</p>
+    </div>
+
+    <h3 class="subhead">Как такой сценарий выглядит на вашем объекте</h3>
+    <ol class="steps">
+      <li><h4>Карта и маршрут</h4><p>Робот картографирует территорию. Задаём маршруты и контрольные точки, указываем, что снимать в каждой из них.</p></li>
+      <li><h4>Расписание</h4><p>Обходы днём и ночью, в выходные и праздники. На пилоте в кампусе было около 4 обходов в будний день.</p></li>
+      <li><h4>Обход</h4><p>Робот идёт сам, объезжает препятствия, проходит лестницы, анализирует обстановку прямо в движении.</p></li>
+      <li><h4>Событие</h4><p>Оператор видит событие с фото, временем и точкой на карте. Может спросить VLM о происходящем или взять управление.</p></li>
+      <li><h4>Отчёт</h4><p>После миссии приходит отчёт о маршруте и замечаниях. В нём указано, что стоит проверить.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ИСПЫТАНИЯ И ДОКУМЕНТЫ ============ -->
+<section class="section" id="tests">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Три платформы прошли испытания, ПО внесено в реестр</h2>
+      <p>4 августа 2026 года три робота прошли программу испытаний в Центре испытаний робототехники Фонда «Московский инновационный кластер» на территории Инновационного центра «Сколково». Отказов, сбоев и аварийных ситуаций не выявлено.</p>
+    </div>
+
+    <div class="tests-video">
+      <figure>
+        <div class="player">
+          <video controls preload="none" playsinline poster="public/images/posters/tests-a.webp" width="1920" height="1080" aria-label="Видео с испытаний, 2 минуты">
+            <source src="public/video/tests-a.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
+            <source src="public/video/tests-a.h264.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="caption">Видео с испытаний: полигон и павильон. 2 минуты, со звуком</figcaption>
+      </figure>
+      <figure>
+        <div class="player">
+          <video controls preload="none" playsinline poster="public/images/posters/tests-b.webp" width="1080" height="606" aria-label="Вторая нарезка с испытаний, 2 минуты">
+            <source src="public/video/tests-b.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
+            <source src="public/video/tests-b.h264.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="caption">Те же испытания крупнее: роботы, пульт, работа оператора</figcaption>
+      </figure>
+    </div>
+
+    <div class="loops">
+      <figure><div class="player"><video data-loop muted loop playsinline preload="none" poster="public/images/posters/loop-stack.webp" width="1280" height="552" aria-label="Робот заезжает на стопку панелей"><source src="public/video/loop-stack.mp4" type="video/mp4"></video></div><figcaption class="caption">Высокое препятствие</figcaption></figure>
+      <figure><div class="player"><video data-loop muted loop playsinline preload="none" poster="public/images/posters/loop-stairs.webp" width="1280" height="552" aria-label="Робот на внутренней лестнице"><source src="public/video/loop-stairs.mp4" type="video/mp4"></video></div><figcaption class="caption">Лестница, ступени 17 см</figcaption></figure>
+      <figure><div class="player"><video data-loop muted loop playsinline preload="none" poster="public/images/posters/loop-incline.webp" width="1280" height="552" aria-label="Робот заезжает на наклонную плоскость"><source src="public/video/loop-incline.mp4" type="video/mp4"></video></div><figcaption class="caption">Уклон не менее 30 %</figcaption></figure>
+    </div>
+
+    <div class="table-scroll">
+      <table class="table table--tests">
+        <thead>
+          <tr><th scope="col">Что проверяли, значения из программы испытаний</th><th scope="col">Unitree A2-W Standard</th><th scope="col">Inchbot L1 Edu</th><th scope="col">Inchbot M1 (Охрбот)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Протокол от 04.08.2026</th><td data-label="Unitree A2-W">№ 28</td><td data-label="Inchbot L1 Edu">№ 29</td><td data-label="Inchbot M1">№ 30</td></tr>
+          <tr><th scope="row">Препятствие, высота</th><td data-label="Unitree A2-W">не менее 91 см</td><td data-label="Inchbot L1 Edu">не менее 29 см</td><td data-label="Inchbot M1">не менее 91 см</td></tr>
+          <tr><th scope="row">Уклон</th><td data-label="Unitree A2-W">не менее 30 %</td><td data-label="Inchbot L1 Edu">не менее 30 %</td><td data-label="Inchbot M1">не менее 30 %</td></tr>
+          <tr><th scope="row">Лестница, подъём и спуск</th><td colspan="3">ступень 17 см, длина ступени 30 см, ширина прохода 121 см</td></tr>
+          <tr><th scope="row">Движение с грузом, 30 секунд</th><td data-label="Unitree A2-W">35 и 45 кг</td><td data-label="Inchbot L1 Edu">8, 10,5 и 13 кг</td><td data-label="Inchbot M1">35 и 45 кг</td></tr>
+          <tr><th scope="row">Устойчивость: на робота падает груз с 180 см</th><td data-label="Unitree A2-W">5 кг</td><td data-label="Inchbot L1 Edu">1,5 кг</td><td data-label="Inchbot M1">5 кг</td></tr>
+          <tr><th scope="row">Пересечённая местность с крупным мусором</th><td colspan="3">пройдено без потери равновесия</td></tr>
+          <tr><th scope="row">Заключение протокола</th><td colspan="3">успешно прошёл все испытания, отказов и сбоев нет</td></tr>
+          <tr><th scope="row">Масса</th><td data-label="Unitree A2-W">53 кг</td><td data-label="Inchbot L1 Edu">15 кг</td><td data-label="Inchbot M1">41 кг</td></tr>
+          <tr><th scope="row">Габариты стоя, мм</th><td data-label="Unitree A2-W">900 × 440 × 625</td><td data-label="Inchbot L1 Edu">630 × 360 × 415</td><td data-label="Inchbot M1">930 × 480 × 585</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="proofs">
+      <div>
+        <h3>Программы и протоколы испытаний</h3>
+        <div class="docs">
+          <a class="doc" href="public/docs/pmi-28-unitree-a2-w.pdf" download="ПМИ_28_Unitree_A2-W.pdf"><span>Unitree A2-W, № 28<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
+          <a class="doc" href="public/docs/pmi-29-inchbot-l1-edu.pdf" download="ПМИ_29_Inchbot_L1_Edu.pdf"><span>Inchbot L1 Edu, № 29<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
+          <a class="doc" href="public/docs/pmi-30-inchbot-m1.pdf" download="ПМИ_30_Inchbot_M1.pdf"><span>Inchbot M1, № 30<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
+        </div>
+        <p class="note">В опубликованных копиях скрыты контакты представителей. На видео M1 и L1 Edu с грузом также проходят пандусы 7° и пороги до 20 см.</p>
+      </div>
+      <div class="proofs__list">
+        <h3>ПО и компания</h3>
+        <dl>
+          <div class="spec"><dt>ПО Qubot</dt><dd><a class="link" href="https://reestr.digital.gov.ru/reestr/16296431/" target="_blank" rel="noopener">Единый реестр российских программ ↗</a></dd></div>
+          <div class="spec"><dt>Кластер</dt><dd><a class="link" href="https://i.moscow/company/54615046" target="_blank" rel="noopener">Участник МИК, карточка компании ↗</a></dd></div>
+          <div class="spec"><dt>Статус</dt><dd>Аккредитованная ИТ-компания</dd></div>
+          <div class="spec"><dt>Обзор ПО</dt><dd><a class="link" href="public/docs/qubot-overview.pdf" download="Qubot_обзор_ПО.pdf">Описание комплекса, PDF, 310 КБ</a></dd></div>
+        </dl>
+        <p class="note">Эти испытания проверяли сами платформы: проходимость, груз и устойчивость. Автономную работу ПО и качество распознавания на вашем объекте проверяем на пилоте по заранее согласованным критериям.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ БЕЗОПАСНОСТЬ, СТАБИЛЬНОСТЬ, ДАННЫЕ ============ -->
+<section class="section section--dark" id="security">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Что будет, если что-то пойдёт не так</h2>
+      <p>Навигация, связь, видео и аналитика работают как изолированные сервисы. Отказ связи или отдельной модели не останавливает движение.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="table table--dark">
+        <tbody>
+          <tr><th scope="row">Пропала связь</th><td>Миссия, анализ и запись продолжаются автономно. Когда LTE-соединение восстановится, события и снимки синхронизируются.</td></tr>
+          <tr><th scope="row">Отказала модель аналитики</th><td>Движение не останавливается, робот идёт дальше по маршруту.</td></tr>
+          <tr><th scope="row">GNSS подавлен или подменён</th><td>Робот продолжает работать на LiDAR, IMU и одометрии.</td></tr>
+          <tr><th scope="row">Потеряна локализация</th><td>Если это предусмотрено сценарием, робот восстанавливает положение и продолжает миссию.</td></tr>
+          <tr><th scope="row">Садится батарея</th><td>Робот сам уходит на станцию, заряжается и возвращается к обходам по расписанию.</td></tr>
+          <tr><th scope="row">Человек или препятствие на пути</th><td>Робот объезжает его и корректирует маршрут. Оператор в любой момент может взять управление или остановить робота.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subhead">Данные и доступ</h3>
+    <ul class="data-list">
+      <li><h4>Данные остаются у заказчика</h4><p>Серверную часть разворачиваем в РФ, конфиденциальные данные размещаем в контуре заказчика. Схему размещения и передачи данных фиксируем при внедрении.</p></li>
+      <li><h4>Роли и журнал действий</h4><p>Есть роли «Администратор» и «Оператор». Система записывает действия пользователей в журнал.</p></li>
+      <li><h4>Персональные данные</h4><p>Фото и видео хранятся на сервере заказчика от 3 месяцев. Правила обработки изображений людей и госномеров согласуем при внедрении, лица можно маскировать.</p></li>
+      <li><h4>Интеграции</h4><p>API для видеонаблюдения, СКУД, систем оповещения и мессенджеров по требованию заказчика.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ КОМАНДА И КОМПАНИЯ. Фото команды: public/images/photos/team-*.webp ============ -->
+<section class="section" id="company">
+  <div class="wrap">
+    <div class="company">
+      <figure>
+        <img class="photo" loading="lazy" src="public/images/photos/team-768.webp" srcset="public/images/photos/team-768.webp 768w, public/images/photos/team-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 58vw" width="1280" height="800" alt="Команда Qubot с гуманоидным роботом и двумя роботами-собаками">
+        <figcaption class="caption">Команда Qubot в Кластере «Ломоносов», Москва</figcaption>
+      </figure>
+      <div>
+        <h2>Кто делает Qubot</h2>
+        <p class="company__lead">Мы пишем ПО для роботов, а ещё продаём и настраиваем самих роботов, поэтому работаем и с железом, и с софтом.</p>
+        <ul class="company__facts">
+          <li>Участник <a class="link" href="https://i.moscow/company/54615046" target="_blank" rel="noopener">Московского инновационного кластера ↗</a></li>
+          <li>Выступаем в партнёрстве со Сколтехом</li>
+          <li>Аккредитованная ИТ-компания</li>
+          <li>ПО в <a class="link" href="https://reestr.digital.gov.ru/reestr/16296431/" target="_blank" rel="noopener">реестре российского ПО ↗</a></li>
+          <li>Команда работает в Кластере «Ломоносов» в Москве</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gallery">
+      <figure><img class="photo" loading="lazy" src="public/images/photos/ramp-descent-800.webp" srcset="public/images/photos/ramp-descent-800.webp 800w, public/images/photos/ramp-descent-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw" width="1600" height="1067" alt="Робот спускается по наклонной платформе"></figure>
+      <figure><img class="photo" loading="lazy" src="public/images/photos/chassis-800.webp" srcset="public/images/photos/chassis-800.webp 800w, public/images/photos/chassis-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw" width="1600" height="1067" alt="Корпус и колёсно-шагающие опоры робота крупным планом"></figure>
+      <figure><img class="photo" loading="lazy" src="public/images/photos/balance-800.webp" srcset="public/images/photos/balance-800.webp 800w, public/images/photos/balance-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw" width="1600" height="1067" alt="Робот балансирует на двух колёсах"></figure>
+    </div>
+    <p class="caption">Показ роботов на стратегической сессии в ИНТЦ, 26 августа 2026 года</p>
+  </div>
+</section>
+
+<!-- ============ ПИЛОТ ============ -->
+<section class="section section--tint" id="pilot">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Пилот на вашем объекте за 5-6 недель</h2>
+      <p>Критерии успеха фиксируем до старта: доля выполненных миссий, точность распознавания по выбранным сценариям, число вмешательств оператора.</p>
+    </div>
+    <ol class="pilot-steps">
+      <li><span class="pilot-steps__time">1 неделя</span><h3>Обследование</h3><p>Изучаем территорию и задачи, согласуем сценарии и критерии успеха.</p></li>
+      <li><span class="pilot-steps__time">2-3 недели</span><h3>Подготовка</h3><p>Картографируем территорию, задаём маршруты и контрольные точки, настраиваем события и уведомления.</p></li>
+      <li><span class="pilot-steps__time">около 10 дней</span><h3>Пилотная эксплуатация</h3><p>Робот ходит по расписанию, каждую неделю присылаем отчёт по миссиям и событиям.</p></li>
+      <li><span class="pilot-steps__time">3-4 дня</span><h3>Итоги</h3><p>Передаём отчёт по критериям успеха, конфигурацию и расчёт окупаемости для внедрения.</p></li>
+    </ol>
+    <div class="pilot-more">
+      <div>
+        <h4>От вас</h4>
+        <p>План территории, доступ на объект, место и питание для зарядной станции, связь (LTE), ответственный сотрудник.</p>
+      </div>
+      <div>
+        <h4>После пилота</h4>
+        <p>Поставляем робота, разворачиваем сервер в контуре заказчика, обучаем персонал и фиксируем схему размещения данных. Обучение операторов и охраны занимает неделю, дальше работает техподдержка.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЦЕНЫ НА ПО И УСЛУГИ. Цены платформ в блоке «Роботы» ============ -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Стоимость ПО и аренда</h2>
+      <p>Цены за одного робота, с НДС, действительны до 17 ноября 2026 года. Итоговый состав и цену фиксируем в коммерческом предложении.</p>
+    </div>
+    <div class="licenses">
+      <article class="license">
+        <h3>Ежемесячная лицензия</h3>
+        <p class="license__price">70 000 ₽ <small>в месяц</small></p>
+        <p>Использование ПО в оплаченный период, обновления и техподдержка. Подходит для пилота и поэтапного внедрения.</p>
+      </article>
+      <article class="license">
+        <h3>Бессрочная лицензия</h3>
+        <p class="license__price">1 200 000 ₽ <small>один раз</small></p>
+        <p>Бессрочное право на установленную версию и техподдержка 12 месяцев.</p>
+      </article>
+    </div>
+    <dl class="pricing-list">
+      <div class="spec"><dt>Автоматическая зарядная станция</dt><dd>540 000 ₽ для Inchbot M1, для других моделей по запросу</dd></div>
+      <div class="spec"><dt>Аренда робота</dt><dd>от 40 000 ₽ в день, зависит от срока</dd></div>
+      <div class="spec"><dt>Обследование, картографирование, пусконаладка, интеграция</dt><dd>по ТЗ, считаем после его согласования</dd></div>
+      <div class="spec"><dt>Дополнительные модели аналитики и нестандартные сценарии</dt><dd>по ТЗ</dd></div>
+    </dl>
+
+    <div class="economy">
+      <div>
+        <h3>Месячный пилот на Inchbot M1</h3>
+        <dl>
+          <div class="spec"><dt>Аренда робота, 30 дней × 40 000 ₽ (средняя ставка от 30 дней)</dt><dd>1 200 000 ₽</dd></div>
+          <div class="spec"><dt>Инженеры, 2 × 10 дней × 10 000 ₽</dt><dd>200 000 ₽</dd></div>
+          <div class="spec"><dt>Лицензия Qubot, 1 месяц</dt><dd>70 000 ₽</dd></div>
+          <div class="spec spec--total"><dt>Итого без логистики и проживания</dt><dd>1 470 000 ₽</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>Окупаемость при покупке</h3>
+        <p>Для сравнения берём оклад охранника 80 000 ₽ в месяц, с начислениями 30 % это 104 000 ₽ за ставку. Если робот закрывает обходы двух ставок, M1 стоит 5 200 000 ₽, а лицензия 70 000 ₽ в месяц, покупка окупится примерно за 37,7 месяца: 5 200 000 / (208 000 − 70 000).</p>
+        <p class="note">Станция, электроэнергия, связь, техобслуживание, аккумуляторы и пусконаладка в расчёт не включены. Быстрее всего робот окупается на крупных и многоэтажных объектах с круглосуточным контролем. Расчёт под ваш объект делаем по плану территории и текущей организации охраны.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ВОПРОСЫ ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Робот заменит охранника?</summary>
+        <p>Робот берёт на себя регулярные обходы и сбор данных. Оценка происшествий, решения и выезд остаются за сотрудниками охраны.</p>
+      </details>
+      <details>
+        <summary>Что с погодой и зимой?</summary>
+        <p>У M1 защита IP67 и работа от −20 до +55 °C. Робот проходит там, где может пройти человек: зимой территорию очищают так же, как для пешеходов, а в сильный гололёд обходы приостанавливают.</p>
+      </details>
+      <details>
+        <summary>Как робот работает ночью?</summary>
+        <p>Обходы идут круглосуточно. Для съёмки в темноте устанавливается тепловизор, а Qubot контролирует уровень освещённости территории.</p>
+      </details>
+      <details>
+        <summary>Где хранятся видео и фото?</summary>
+        <p>На сервере заказчика, срок хранения от 3 месяцев. Правила обработки, доступа и хранения изображений людей и госномеров согласуем при внедрении.</p>
+      </details>
+      <details>
+        <summary>Какую площадь закрывает один робот?</summary>
+        <p>Qubot работает на территориях до 1 км²: большой объект делится на несколько карт. Количество роботов и частоту обходов считаем по плану объекта. Результаты пилота в кампусе нельзя напрямую переносить на другие объекты.</p>
+      </details>
+      <details>
+        <summary>Колёсная платформа пройдёт лестницу?</summary>
+        <p>Да, все пять моделей поднимаются и спускаются по лестницам. L1-W и A2-W едут на колёсах по ровным участкам и шагают на препятствиях. Геометрию лестниц, сцепление и нагрузку проверяем на выбранной платформе.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЗАЯВКА. Логика формы в main.js ============ -->
+<section class="section contact" id="contact">
+  <div class="wrap contact__grid">
+    <div>
+      <h2>Расскажите про объект</h2>
+      <p class="contact__lead">Подберём платформу, аналитику и сценарий пилота.</p>
+      <p class="contact__direct">
+        <a href="tel:+74996474546">+7 499 647-45-46</a>
+        <a href="mailto:info@qubot.ru">info@qubot.ru</a>
+      </p>
+      <img class="contact__photo" loading="lazy" src="public/images/photos/platforms-800.webp" srcset="public/images/photos/platforms-800.webp 800w, public/images/photos/platforms-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 45vw" width="1600" height="960" alt="Два робота-собаки: колёсно-шагающий и шагающий">
+    </div>
+    <form class="form" id="contact-form" novalidate>
+      <div class="form__row">
+        <label class="field"><span>Ваше имя</span><input name="name" autocomplete="name" required></label>
+        <label class="field"><span>Компания</span><input name="company" autocomplete="organization"></label>
+      </div>
+      <div class="form__row">
+        <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
+        <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <label class="field"><span>Объект и задача</span><textarea name="message" placeholder="Например: склад 20 000 м², ночные обходы, контроль СИЗ"></textarea></label>
+      <label class="consent"><input type="checkbox" name="consent" required><span>Разрешаю связаться со мной по указанным контактам для обсуждения заявки</span></label>
+      <p class="form__error" id="form-error" role="alert" hidden></p>
+      <button class="btn btn--solid" type="submit">Подготовить письмо</button>
+      <p class="note form__hint">Кнопка откроет письмо с заявкой в вашей почтовой программе. Проверьте текст и отправьте его на info@qubot.ru.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ ПОДВАЛ ============ -->
+<footer class="footer">
+  <svg class="footer__mark" viewBox="0 0 1881 416" aria-hidden="true"><use href="#logo"/></svg>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <svg class="footer__logo" viewBox="0 0 1881 416" role="img" aria-label="Qubot"><use href="#logo"/></svg>
+      </div>
+      <div>
+        <h4>ПО и роботы</h4>
+        <ul>
+          <li><a href="#software">Функции ПО</a></li>
+          <li><a href="#robots">Роботы</a></li>
+          <li><a href="#mission">Отчёт о миссии</a></li>
+          <li><a href="#pricing">Цены</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#tests">Испытания</a></li>
+          <li><a href="#company">О нас</a></li>
+          <li><a href="https://qubot.ru" target="_blank" rel="noopener">qubot.ru ↗</a></li>
+        </ul>
+      </div>
+      <div class="footer__contacts">
+        <a href="tel:+74996474546">+7 499 647-45-46</a>
+        <a href="mailto:info@qubot.ru">info@qubot.ru</a>
+      </div>
+    </div>
+    <p class="footer__legal">© 2026 АО «КЬЮ ГРУПП». ИНН 9724220494, КПП 772401001, ОГРН 1257700223615. 115230, г. Москва, р-н Нагатино-Садовники, ул. Нагатинская, д. 2, помещ. 20/2. Информация на сайте не является публичной офертой.</p>
+  </div>
+</footer>
+</body>
 </html>

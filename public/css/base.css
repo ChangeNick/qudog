@@ -1,0 +1,47 @@
+/* Сброс, типографика, контейнер. */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font: 400 16px/1.5 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+figure { margin: 0; }
+p { margin: 0; }
+button, input, textarea { font: inherit; color: inherit; }
+
+h1, h2, h3, h4 { margin: 0; color: var(--ink); font-weight: 500; text-wrap: balance; }
+h1 { font-weight: 600; font-size: clamp(32px, 4.3vw, 62px); line-height: 1.14; letter-spacing: -.02em; }
+h2 { font-size: clamp(26px, 3vw, 42px); line-height: 1.18; letter-spacing: -.025em; }
+h3 { font-size: clamp(19px, 1.6vw, 22px); line-height: 1.25; letter-spacing: -.012em; }
+h4 { font-size: 16px; line-height: 1.35; font-weight: 600; }
+
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 2px; }
+
+.skip {
+  position: absolute; left: 16px; top: -60px; z-index: 100;
+  padding: 10px 16px; border-radius: var(--r-s); background: var(--white); color: var(--ink);
+}
+.skip:focus { top: 12px; }
+
+.wrap { max-width: 1440px; margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section); }
+.section + .section:not(.section--tint, .section--dark, .contact) { border-top: 1px solid var(--line); }
+.section--tint { background: var(--warm); }
+
+.section-head { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 16px 48px; align-items: start; margin-bottom: clamp(28px, 3.4vw, 48px); }
+.section-head p { font-size: 17px; line-height: 1.5; }
+@media (max-width: 860px) { .section-head { grid-template-columns: 1fr; } }
+
+.muted { color: var(--muted); }
+.note { font-size: 14px; line-height: 1.45; color: var(--muted); }

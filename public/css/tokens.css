@@ -1,0 +1,36 @@
+/* Цвета, шрифт, радиусы. Значения сняты с qubot.ru. */
+@font-face { font-family: "Wix Madefor Display"; font-weight: 400; font-display: swap; src: url("../fonts/wix-regular.woff2") format("woff2"); }
+@font-face { font-family: "Wix Madefor Display"; font-weight: 500; font-display: swap; src: url("../fonts/wix-medium.woff2") format("woff2"); }
+@font-face { font-family: "Wix Madefor Display"; font-weight: 600; font-display: swap; src: url("../fonts/wix-semibold.woff2") format("woff2"); }
+@font-face { font-family: "Wix Madefor Display"; font-weight: 700; font-display: swap; src: url("../fonts/wix-bold.woff2") format("woff2"); }
+
+:root {
+  --blue: #4760de;
+  --blue-hover: #1933cd;
+
+  --ink: #191919;
+  --text: #3e3e3e;
+  --muted: #666;
+
+  --white: #fff;
+  --card: #f5f5f5;
+  --warm: #efedec;
+  --form: #ececec;
+  --line: #e6e6e6;
+
+  --black: #000;
+  --dark: #1f1f1f;
+  --dark-card: #2b2b2b;
+  --on-dark: #f3f3f3;
+  --on-dark-muted: #b0b0b0;
+
+  --r-s: 6px;
+  --r-m: 10px;
+  --r-l: 15px;
+
+  --gutter: clamp(16px, 2.9vw, 41px);
+  --section: clamp(56px, 7vw, 104px);
+  --header-h: 61px;
+
+  --font: "Wix Madefor Display", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
