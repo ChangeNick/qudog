@@ -91,13 +91,14 @@
 <section class="film" id="film">
   <div class="wrap">
     <div class="player player--film">
-      <video id="film-video" controls preload="none" playsinline poster="public/images/posters/tests-a.webp" width="1920" height="1080" aria-label="Видео с испытаний, 2 минуты">
-        <source src="public/video/tests-a.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
-        <source src="public/video/tests-a.h264.mp4" type="video/mp4">
+      <video id="film-video" controls preload="none" playsinline poster="public/images/posters/film.webp" width="2560" height="1402" aria-label="Обзор ПО и кейсов Qudog, 2 минуты 25 секунд">
+        <source src="public/video/film.mobile.mp4" type="video/mp4" media="(max-width: 760px)">
+        <source src="public/video/film.av1.mp4" type='video/mp4; codecs="av01.0.12M.08"'>
+        <source src="public/video/film.h264.mp4" type="video/mp4">
       </video>
-      <button class="player__play" id="film-play" type="button" hidden aria-label="Смотреть видео с испытаний"><span aria-hidden="true"></span></button>
+      <button class="player__play" id="film-play" type="button" hidden aria-label="Смотреть обзор ПО и кейсов"><span aria-hidden="true"></span></button>
     </div>
-    <p class="film__caption">Роботы на испытаниях: полигон и павильон, август 2026. 2 минуты, со звуком. <a href="#tests">Результаты и протоколы</a></p>
+    <p class="film__caption">Обзор ПО и кейсов Qudog: интерфейс оператора, распознавание, отчёты о миссиях и кадры с объектов. 2 минуты 25 секунд, со звуком. <a href="#cases">Все кейсы</a></p>
   </div>
 </section>
 
@@ -397,17 +398,6 @@
       </li>
     </ul>
 
-    <div class="split split--media split--reverse">
-      <figure class="player">
-        <video controls preload="none" playsinline poster="public/images/posters/overview-poster.webp" width="1280" height="702" aria-label="Обзор ПО и кейсов Qudog, 2 минуты 25 секунд">
-          <source src="public/video/software-overview.mp4" type="video/mp4">
-        </video>
-      </figure>
-      <div>
-        <h3>Обзор ПО и кейсов</h3>
-        <p>Интерфейс оператора, распознавание людей и госномеров, отчёты о миссиях и кадры с объектов. 2 минуты 25 секунд, со звуком.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -496,12 +486,12 @@
     <div class="tests-video">
       <figure>
         <div class="player">
-          <video controls preload="none" playsinline poster="public/images/posters/tests-b.webp" width="1080" height="606" aria-label="Вторая нарезка с испытаний, 2 минуты">
-            <source src="public/video/tests-b.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
-            <source src="public/video/tests-b.h264.mp4" type="video/mp4">
+          <video controls preload="none" playsinline poster="public/images/posters/tests-a.webp" width="1920" height="1080" aria-label="Видео с испытаний, 2 минуты">
+            <source src="public/video/tests-a.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
+            <source src="public/video/tests-a.h264.mp4" type="video/mp4">
           </video>
         </div>
-        <figcaption class="caption">Испытания крупным планом: роботы, пульт, работа оператора</figcaption>
+        <figcaption class="caption">Видео с испытаний: полигон и павильон, август 2026. 2 минуты, со звуком</figcaption>
       </figure>
       <div class="tests-docs">
         <h3>Программы и протоколы испытаний</h3>
@@ -511,6 +501,15 @@
           <a class="doc" href="public/docs/pmi-30-inchbot-m1.pdf" download="ПМИ_30_Inchbot_M1.pdf"><span>Inchbot M1, № 30<small>PDF, 370 КБ</small></span><span>Скачать</span></a>
         </div>
         <p class="note">В опубликованных копиях скрыты контакты представителей. На видео M1 и L1 Edu с грузом также проходят пандусы 7° и пороги до 20 см.</p>
+        <figure class="tests-closeup">
+          <div class="player">
+          <video controls preload="none" playsinline poster="public/images/posters/tests-b.webp" width="1080" height="606" aria-label="Вторая нарезка с испытаний, 2 минуты">
+            <source src="public/video/tests-b.av1.mp4" type='video/mp4; codecs="av01.0.08M.08"'>
+            <source src="public/video/tests-b.h264.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="caption">Испытания крупным планом: роботы, пульт, работа оператора</figcaption>
+        </figure>
       </div>
     </div>
 

@@ -61,7 +61,7 @@
 
 /* Большое видео сразу под первым экраном */
 .film { background: var(--black); padding-block: clamp(28px, 3.6vw, 56px) clamp(36px, 4vw, 64px); color: #cfcfcf; }
-.player--film { aspect-ratio: 16 / 9; }
+.player--film { aspect-ratio: 2560 / 1402; }
 .player__play { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; padding: 0; border: 0; background: rgba(0,0,0,.14); cursor: pointer; transition: background-color .2s ease-in-out; }
 .player__play[hidden] { display: none; }
 .player__play:hover { background: rgba(0,0,0,.28); }
@@ -193,6 +193,7 @@
 /* Испытания */
 .tests-video { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px clamp(24px, 4vw, 56px); align-items: start; }
 .tests-docs h3 { margin-bottom: 14px; }
+.tests-closeup { margin-top: 20px; }
 .tests-video .player video { aspect-ratio: 16 / 9; }
 .loops { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-block: 24px clamp(28px, 3.2vw, 44px); }
 .loops .player { border-radius: var(--r-m); }
