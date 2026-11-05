@@ -17,7 +17,8 @@
 /* Первый экран */
 .hero { position: relative; display: flex; min-height: 100svh; background: var(--black); color: var(--on-dark); overflow: hidden; }
 .hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%; transform: scale(1.15); transform-origin: 20% 100%; }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.5) 42%, rgba(0,0,0,.26) 72%, rgba(0,0,0,.44) 100%); }
+/* Низ затухает в чистый чёрный, поэтому граница со следующей секцией не видна */
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, #000 0%, rgba(0,0,0,.84) 16%, rgba(0,0,0,.5) 44%, rgba(0,0,0,.26) 72%, rgba(0,0,0,.44) 100%); }
 .hero__body { position: relative; z-index: 1; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-top: calc(var(--header-h) + 32px); padding-bottom: 24px; }
 .hero h1 { color: var(--white); font-size: clamp(30px, 3.4vw, 52px); font-weight: 500; max-width: 19em; }
 .hero__lead { margin-top: 18px; max-width: 42em; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.45; color: #e9e9e9; }
@@ -50,13 +51,16 @@
 
 @media (max-width: 900px) {
   .hero { flex-direction: column; }
-  .hero__img { position: static; height: 38svh; transform: none; object-position: 58% 35%; }
+  .hero__img {
+    position: static; height: 42svh; transform: none; object-position: 58% 35%;
+    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+  }
   .hero::after { display: none; }
-  .hero__body { padding-top: 20px; }
+  .hero__body { padding-top: 4px; }
 }
 
 /* Большое видео сразу под первым экраном */
-.film { background: var(--black); padding-block: 0 clamp(36px, 4vw, 64px); color: #cfcfcf; }
+.film { background: var(--black); padding-block: clamp(28px, 3.6vw, 56px) clamp(36px, 4vw, 64px); color: #cfcfcf; }
 .player--film { aspect-ratio: 16 / 9; }
 .player__play { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; padding: 0; border: 0; background: rgba(0,0,0,.14); cursor: pointer; transition: background-color .2s ease-in-out; }
 .player__play[hidden] { display: none; }

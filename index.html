@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="public/css/components.css">
   <link rel="stylesheet" href="public/css/sections.css">
   <script src="public/js/main.js" defer></script>
+  <script src="public/js/lightbox.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">К содержимому</a>
@@ -783,5 +784,16 @@
     <p class="footer__legal">© 2026 АО «КЬЮ ГРУПП». ИНН 9724220494, КПП 772401001, ОГРН 1257700223615. 115230, г. Москва, р-н Нагатино-Садовники, ул. Нагатинская, д. 2, помещ. 20/2. Информация на сайте не является публичной офертой.</p>
   </div>
 </footer>
+
+<!-- ============ ПРОСМОТР ИЗОБРАЖЕНИЙ. Логика в lightbox.js ============ -->
+<dialog class="lightbox" id="lightbox" aria-label="Просмотр изображения">
+  <button class="lightbox__btn lightbox__close" type="button" data-close aria-label="Закрыть"></button>
+  <button class="lightbox__btn lightbox__prev" type="button" data-prev aria-label="Предыдущее изображение"></button>
+  <figure class="lightbox__figure">
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__next" type="button" data-next aria-label="Следующее изображение"></button>
+</dialog>
 </body>
 </html>

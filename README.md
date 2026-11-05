@@ -28,7 +28,8 @@ public/css/tokens.css      цвета, шрифт, радиусы (значен�
 public/css/base.css        сброс, заголовки, контейнер
 public/css/components.css  кнопки, шапка, таблицы, форма, подвал
 public/css/sections.css    секции в порядке index.html
-public/js/main.js          шапка, меню, видео-петли, письмо из формы
+public/js/main.js          шапка, меню, большое видео, видео-петли, письмо из формы
+public/js/lightbox.js      просмотр изображений
 public/images/             photos, robots, ui, mission, posters
 public/video/              ролики
 public/docs/               PDF для скачивания

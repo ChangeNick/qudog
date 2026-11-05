@@ -2,13 +2,26 @@
 (() => {
   'use strict';
 
-  // Шапка прозрачная только в самом верху страницы и при закрытом меню
+  // Шапка прозрачная только в самом верху страницы и при закрытом меню.
+  // На телефоне прячется при скролле вниз и возвращается при скролле вверх.
   const header = document.getElementById('header');
   const menuBtn = document.getElementById('menu-btn');
   const menuPanel = document.getElementById('menu-panel');
   let menuOpen = false;
 
-  const syncHeader = () => header.classList.toggle('is-over-hero', window.scrollY <= 4 && !menuOpen);
+  let lastY = window.scrollY;
+
+  const syncHeader = () => {
+    const y = window.scrollY;
+    header.classList.toggle('is-over-hero', y <= 4 && !menuOpen);
+
+    // Резиновый отскок Safari на краях страницы не считается скроллом
+    if (y < 0 || y > document.documentElement.scrollHeight - window.innerHeight) return;
+    if (Math.abs(y - lastY) < 6) return;
+    // На ПК класс ни на что не влияет: стиль задан только для экранов до 1040px
+    header.classList.toggle('is-hidden', y > lastY && y > 80 && !menuOpen);
+    lastY = y;
+  };
   window.addEventListener('scroll', syncHeader, { passive: true });
   syncHeader();
 
