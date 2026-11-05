@@ -1,18 +1,30 @@
-// Шапка над первым экраном, мобильное меню, видео-петли, письмо из формы.
+// Шапка, мобильное меню, видео-петли, письмо из формы.
 (() => {
   'use strict';
 
-  // Шапка прозрачная, пока виден первый экран
+  // Шапка прозрачная только в самом верху страницы и при закрытом меню
   const header = document.getElementById('header');
-  const hero = document.querySelector('.hero');
-  new IntersectionObserver(([e]) => header.classList.toggle('is-over-hero', e.isIntersecting), {
-    rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
-  }).observe(hero);
+  const menuBtn = document.getElementById('menu-btn');
+  const menuPanel = document.getElementById('menu-panel');
+  let menuOpen = false;
 
-  // Мобильное меню закрывается по клику на пункт и по Esc
-  const menu = document.getElementById('menu');
-  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => { menu.open = false; }));
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') menu.open = false; });
+  const syncHeader = () => header.classList.toggle('is-over-hero', window.scrollY <= 4 && !menuOpen);
+  window.addEventListener('scroll', syncHeader, { passive: true });
+  syncHeader();
+
+  const setMenu = (open) => {
+    menuOpen = open;
+    menuPanel.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    syncHeader();
+  };
+  menuBtn.addEventListener('click', () => setMenu(!menuOpen));
+  menuPanel.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('click', (e) => { if (menuOpen && !header.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuOpen) { setMenu(false); menuBtn.focus(); }
+  });
 
   // Тихие короткие ролики играют только в зоне видимости.
   // При «уменьшить движение» остаются с нативными контролами и не запускаются сами.
