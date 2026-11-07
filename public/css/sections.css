@@ -64,7 +64,7 @@
 .film__caption { margin-top: 14px; font-size: 14px; line-height: 1.45; }
 .film__caption a { color: var(--white); text-underline-offset: 3px; }
 
-/* Возможности и манипуляторы */
+/* Возможности */
 .value { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 28px clamp(28px, 5vw, 80px); align-items: start; }
 .value__photo { position: sticky; top: calc(var(--header-h) + 24px); }
 .value__list { margin-top: 26px; }
@@ -72,16 +72,9 @@
 .value__list li { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 20px; align-items: start; }
 .value__list h3 { margin-bottom: 6px; }
 .value__icon { width: 88px; border-radius: var(--r-m); }
-.arms { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.arm { padding: 22px; border-radius: var(--r-l); background: var(--card); }
-.arm img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; border-radius: var(--r-m); background: var(--white); }
-.arm h4 { margin: 16px 0 6px; font-size: 18px; }
-.arm dl { margin: 0; }
-.arm .spec { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); padding: 9px 0; font-size: 14px; }
 @media (max-width: 860px) {
   .value { grid-template-columns: 1fr; }
   .value__photo { position: static; }
-  .arms { grid-template-columns: 1fr; }
 }
 
 /* Функции ПО */
@@ -123,7 +116,7 @@
   .robots { grid-template-columns: 1fr; }
   .robot { grid-template-columns: minmax(0, 1fr) 300px; }
 }
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   .robot { grid-template-columns: 1fr; padding: 22px 20px 0; min-height: 0; }
   .robot__img { width: 52%; padding: 0; margin: 0 auto 8px; }
   .robot__text { padding-bottom: 8px; }
@@ -142,17 +135,26 @@
 .case-main__stats .stat span { font-size: 13.5px; }
 @media (max-width: 860px) { .case-main { grid-template-columns: 1fr; } }
 
-.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: clamp(24px, 3vw, 40px); }
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; margin-top: clamp(24px, 3vw, 40px); }
 .case { display: flex; flex-direction: column; padding: 22px; border-radius: var(--r-l); background: var(--card); }
 .case h3 { font-size: 18px; margin-bottom: 4px; }
 .case__robot { margin-bottom: 10px; font-size: 13.5px; color: var(--muted); }
 .case p:not(.case__robot) { font-size: 15px; line-height: 1.42; }
 /* Фото и ролики под текстом. Нечётное число: первый элемент на всю ширину */
-.case__media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: auto; padding-top: 16px; }
+.case__media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-top: 16px; }
 .case__media img, .case__media video { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r-m); background: var(--black); }
 .case__media > :first-child:nth-last-child(odd) { grid-column: 1 / -1; }
 .case__media--tall img { aspect-ratio: 3 / 4; }
-@media (max-width: 640px) { .case__media--video { grid-template-columns: 1fr; } }
+.case__media--tall > :only-child { grid-column: auto !important; }
+.case__media--natural img { aspect-ratio: auto; }
+@media (max-width: 860px) { .cases { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .case__media { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .case__media::-webkit-scrollbar { display: none; }
+  .case__media > * { flex: 0 0 86%; min-width: 0; scroll-snap-align: start; }
+  .case__media > :only-child { flex-basis: 100%; }
+  .case__media--tall > *, .case__media--tall > :only-child { flex-basis: 62%; }
+}
 
 /* Пример миссии */
 .mission { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 20px; align-items: start; }
@@ -250,15 +252,14 @@
 .license__price small { color: var(--muted); font-size: 15px; font-weight: 400; letter-spacing: 0; }
 .pricing-list { margin: 16px 0 0; }
 .pricing-list .spec { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-.economy { display: grid; grid-template-columns: 1fr 1fr; gap: 28px clamp(28px, 5vw, 72px); margin-top: clamp(32px, 4vw, 52px); }
+.economy { max-width: 720px; margin-top: clamp(32px, 4vw, 52px); }
 .economy h3 { margin-bottom: 12px; }
 .economy dl { margin: 0; }
-.economy .note { margin-top: 12px; }
 .spec--total dt, .spec--total dd { color: var(--ink); font-weight: 600; }
 .economy .spec { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
 .economy .spec dd { text-align: right; white-space: nowrap; }
 @media (max-width: 760px) {
-  .licenses, .economy { grid-template-columns: 1fr; }
+  .licenses { grid-template-columns: 1fr; }
   .pricing-list .spec { grid-template-columns: 1fr; }
 }
 
@@ -281,12 +282,12 @@
 
 /* Телефон: длинные ряды листаются вбок, таблицы складываются в карточки */
 @media (max-width: 640px) {
-  .timeline, .loops, .gallery, .screens, .cases {
+  .timeline, .loops, .gallery, .screens {
     display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
     margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); scrollbar-width: none;
   }
-  .timeline::-webkit-scrollbar, .loops::-webkit-scrollbar, .gallery::-webkit-scrollbar, .screens::-webkit-scrollbar, .cases::-webkit-scrollbar { display: none; }
-  .timeline > *, .loops > *, .gallery > *, .screens > *, .cases > * { flex: 0 0 84%; scroll-snap-align: start; }
+  .timeline::-webkit-scrollbar, .loops::-webkit-scrollbar, .gallery::-webkit-scrollbar, .screens::-webkit-scrollbar { display: none; }
+  .timeline > *, .loops > *, .gallery > *, .screens > * { flex: 0 0 84%; scroll-snap-align: start; }
 
   .split--payloads figure { overflow-x: auto; }
   .split--payloads img { min-width: 640px; }
