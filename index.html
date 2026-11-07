@@ -35,8 +35,8 @@
       <a href="#mission">Отчёт</a>
       <a href="#tests">Испытания</a>
       <a href="#security">Безопасность</a>
-      <a href="#pricing">Цены</a>
       <a href="#company">О нас</a>
+      <a href="#pricing">Цены</a>
       <a class="btn header__cta" href="#contact">Обсудить пилот</a>
     </nav>
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -47,8 +47,8 @@
         <a href="#mission">Отчёт о миссии</a>
         <a href="#tests">Испытания</a>
         <a href="#security">Безопасность</a>
-        <a href="#pricing">Цены</a>
         <a href="#company">О нас</a>
+        <a href="#pricing">Цены</a>
         <a class="btn btn--solid" href="#contact">Обсудить пилот</a>
       </nav>
   </div>
@@ -61,7 +61,8 @@
   <img class="hero__img" src="public/images/photos/hero-ramp-1920.webp" srcset="public/images/photos/hero-ramp-768.webp 768w, public/images/photos/hero-ramp-1280.webp 1280w, public/images/photos/hero-ramp-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Колёсно-шагающий робот Qudog на вершине наклонной платформы" fetchpriority="high">
   <div class="wrap hero__body">
     <h1>Автономные <span class="nowrap">роботы-собаки</span> под задачи мониторинга и инспекции</h1>
-    <p class="hero__lead">Qudog это российское ПО автономного патруля и инспекции для роботов-собак Inchbot и Unitree. Поставляем робота вместе с ПО, настраиваем под объект, обучаем охрану.</p>
+    <p class="hero__lead">Российское ПО автономного патруля, инспекции и доставки грузов для роботов-собак. Поставляем робота вместе с ПО, настраиваем под объект, обучаем.</p>
+    <p class="hero__company">Проект компании Qu Group (Qubot.ru)</p>
     <ul class="trust" aria-label="Подтверждения">
       <li>
         <img src="public/images/logos/mik.svg" width="146" height="40" alt="Московский инновационный кластер">
@@ -94,22 +95,64 @@
   </div>
 </section>
 
-<!-- ============ ЧТО ПОЛУЧАЕТ ЗАКАЗЧИК ============ -->
+<!-- ============ ВОЗМОЖНОСТИ И МАНИПУЛЯТОРЫ ============ -->
 <section class="section" id="value">
   <div class="wrap value">
     <figure class="value__photo">
       <img class="photo" loading="lazy" src="public/images/photos/wheel-legged-800.webp" srcset="public/images/photos/wheel-legged-800.webp 800w, public/images/photos/wheel-legged-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 45vw" width="1600" height="1067" alt="Колёсно-шагающий робот на брусчатке">
     </figure>
     <div>
-      <h2>Что меняется на объекте</h2>
+      <h2>Возможности роботов-собак</h2>
       <ul class="value__list">
-        <li><h3>Обходы без пропусков</h3><p>Робот идёт по расписанию или по команде, разово или по кругу, днём и ночью.</p></li>
-        <li><h3>Доказательства по каждому событию</h3><p>Фото, время и точка на карте вместо устных докладов и ручных записей. В архиве есть поиск по фильтрам.</p></li>
-        <li><h3>У охраны больше времени на реагирование</h3><p>Робот сообщает сотрудникам о событиях, и они не тратят смены на однотипные обходы. Решают и выезжают на происшествие по-прежнему люди.</p></li>
-        <li><h3>Работа там, где человеку тяжело</h3><p>Лестницы и переходы между этажами, неровные поверхности, промышленные зоны, территории до 1 км².</p></li>
-        <li><h3>Без связи обход не прерывается</h3><p>Обход, анализ и запись идут автономно. Данные уходят на сервер, когда связь вернётся.</p></li>
+        <li><img class="value__icon" loading="lazy" src="public/images/value/delivery.webp" width="640" height="640" alt=""><div><h3>Доставка грузов</h3><p>Unitree A2 и A2-W перевозят 25 кг. С таким грузом A2 работает более 3 ч и проходит около 12,5 км, A2-W более 1,5 ч и около 15 км. В тесте с ВкусВиллом Inchbot L1-W вёз 10 кг.</p></div></li>
+        <li><img class="value__icon" loading="lazy" src="public/images/value/emergency.webp" width="640" height="640" alt=""><div><h3>Выявление аварийных ситуаций</h3><p>Дым и признаки задымления, трещины и повреждения конструкций, скопления людей. Каждое событие приходит оператору с фото, временем и точкой на карте.</p></div></li>
+        <li><img class="value__icon" loading="lazy" src="public/images/value/monitoring.webp" width="640" height="640" alt=""><div><h3>Мониторинг объектов</h3><p>Коррозия, повреждения изоляции и визуальные признаки утечек на трубопроводах, сравнение состояния объекта между обходами. С газоанализатором робот контролирует газовую среду: типы газов, чувствительность и сценарии измерений задаём в ТЗ.</p></div></li>
+        <li><img class="value__icon" loading="lazy" src="public/images/value/people.webp" width="640" height="640" alt=""><div><h3>Взаимодействие с людьми</h3><p>Распознаёт людей и транспорт, в том числе в запрещённых зонах, госномера, появление и исчезновение объектов. Подходит к месту события и передаёт его оператору. С аудиомодулем озвучивает сообщения и даёт двустороннюю голосовую связь.</p></div></li>
+        <li><img class="value__icon" loading="lazy" src="public/images/value/manipulator.webp" width="640" height="640" alt=""><div><h3>Взаимодействие с объектом</h3><p>С манипулятором робот работает с предметами на объекте. Модели и характеристики ниже.</p></div></li>
       </ul>
     </div>
+  </div>
+  <div class="wrap">
+    <h3 class="subhead">Манипуляторы</h3>
+    <ul class="arms">
+      <li class="arm">
+        <img loading="lazy" src="public/images/arms/d2.webp" width="640" height="640" alt="Манипулятор Unitree D2">
+        <h4>Unitree D2</h4>
+        <dl>
+          <div class="spec"><dt>Степени свободы</dt><dd>7 и захват</dd></div>
+          <div class="spec"><dt>Вылет</dt><dd>633 мм, с захватом 780 мм</dd></div>
+          <div class="spec"><dt>Грузоподъёмность</dt><dd>3 кг, максимум 5 кг</dd></div>
+          <div class="spec"><dt>Масса</dt><dd>5,9 кг</dd></div>
+          <div class="spec"><dt>Питание</dt><dd>36-58 В</dd></div>
+          <div class="spec"><dt>Совместимость</dt><dd>Unitree A2, по данным производителя</dd></div>
+        </dl>
+      </li>
+      <li class="arm">
+        <img loading="lazy" src="public/images/arms/z1.webp" width="640" height="640" alt="Манипулятор Unitree Z1 Air и Pro">
+        <h4>Unitree Z1 Air и Pro</h4>
+        <dl>
+          <div class="spec"><dt>Степени свободы</dt><dd>6</dd></div>
+          <div class="spec"><dt>Вылет</dt><dd>740 мм</dd></div>
+          <div class="spec"><dt>Грузоподъёмность</dt><dd>Air 2 кг, Pro от 3 кг</dd></div>
+          <div class="spec"><dt>Масса</dt><dd>Air 4,3 кг, Pro 4,5 кг</dd></div>
+          <div class="spec"><dt>Питание</dt><dd>24 В</dd></div>
+          <div class="spec"><dt>Совместимость</dt><dd>согласуем под модель робота</dd></div>
+        </dl>
+      </li>
+      <li class="arm">
+        <img loading="lazy" src="public/images/arms/d1.webp" width="640" height="640" alt="Манипулятор Unitree D1">
+        <h4>Unitree D1</h4>
+        <dl>
+          <div class="spec"><dt>Степени свободы</dt><dd>6 и захват</dd></div>
+          <div class="spec"><dt>Вылет</dt><dd>550 мм, с захватом 670 мм</dd></div>
+          <div class="spec"><dt>Грузоподъёмность</dt><dd>0,5 кг</dd></div>
+          <div class="spec"><dt>Масса</dt><dd>2,37 кг</dd></div>
+          <div class="spec"><dt>Питание</dt><dd>24 В</dd></div>
+          <div class="spec"><dt>Совместимость</dt><dd>согласуем под модель робота</dd></div>
+        </dl>
+      </li>
+    </ul>
+    <p class="note note--after">Характеристики по данным производителей. Массу, питание, интерфейсы и совместимость с конкретной моделью согласуем отдельно. Манипулятор не входит в базовую стоимость платформы и ПО.</p>
   </div>
 </section>
 
@@ -237,10 +280,12 @@
           <h3>Inchbot L1 Edu</h3>
           <p>Шагающая платформа для сервисных, логистических и инспекционных задач.</p>
           <dl>
-            <div class="spec"><dt>Нагрузка</dt><dd>до 12 кг</dd></div>
+            <div class="spec"><dt>Грузоподъёмность</dt><dd>до 12 кг</dd></div>
+            <div class="spec"><dt>Время работы</dt><dd>1-2 ч</dd></div>
             <div class="spec"><dt>Оборудование</dt><dd>камеры, датчики, тепловизоры</dd></div>
           </dl>
           <p class="robot__price">1 490 000 ₽</p>
+          <a class="btn" href="#contact">Заказать</a>
         </div>
         <img class="robot__img" loading="lazy" src="public/images/robots/l1-640.webp" srcset="public/images/robots/l1-640.webp 640w, public/images/robots/l1.webp 1000w" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Inchbot L1 Edu">
       </li>
@@ -250,10 +295,12 @@
           <p>Колёсно-шагающая платформа для обхода протяжённых территорий.</p>
           <dl>
             <div class="spec"><dt>Скорость</dt><dd>до 20 км/ч</dd></div>
-            <div class="spec"><dt>Нагрузка</dt><dd>до 12 кг</dd></div>
+            <div class="spec"><dt>Грузоподъёмность</dt><dd>до 12 кг</dd></div>
+            <div class="spec"><dt>Время работы</dt><dd>1-2 ч</dd></div>
             <div class="spec"><dt>Защита</dt><dd>IP54</dd></div>
           </dl>
           <p class="robot__price">1 590 000 ₽</p>
+          <a class="btn" href="#contact">Заказать</a>
         </div>
         <img class="robot__img" loading="lazy" src="public/images/robots/l1w-640.webp" srcset="public/images/robots/l1w-640.webp 640w, public/images/robots/l1w.webp 1000w" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Inchbot L1-W">
       </li>
@@ -264,21 +311,26 @@
           <dl>
             <div class="spec"><dt>Защита</dt><dd>IP67</dd></div>
             <div class="spec"><dt>Температура</dt><dd>от −20 до +55 °C</dd></div>
-            <div class="spec"><dt>Нагрузка</dt><dd>до 40 кг</dd></div>
+            <div class="spec"><dt>Грузоподъёмность</dt><dd>до 40 кг</dd></div>
+            <div class="spec"><dt>Время работы</dt><dd>до 5 ч, зависит от режима и нагрузки</dd></div>
+            <div class="spec"><dt>Опоры</dt><dd>колёса, меняются на лапы</dd></div>
           </dl>
           <p class="robot__price">5 200 000 ₽</p>
+          <a class="btn" href="#contact">Заказать</a>
         </div>
-        <img class="robot__img" loading="lazy" src="public/images/robots/m1-640.webp" srcset="public/images/robots/m1-640.webp 640w, public/images/robots/m1.webp 1000w" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Inchbot M1">
+        <img class="robot__img" loading="lazy" src="public/images/robots/m1-640.webp" srcset="public/images/robots/m1-640.webp 640w, public/images/robots/m1.webp 1000w" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Inchbot M1 на колёсах">
       </li>
       <li class="robot">
         <div class="robot__text">
           <h3>Unitree A2</h3>
           <p>Четвероногая платформа для патруля, промышленной инспекции и мониторинга. Ходит по неровным поверхностям и лестницам, проходит препятствия.</p>
           <dl>
-            <div class="spec"><dt>Нагрузка в движении</dt><dd>25 кг</dd></div>
-            <div class="spec"><dt>Работа без нагрузки</dt><dd>до 5 ч</dd></div>
+            <div class="spec"><dt>Грузоподъёмность в движении</dt><dd>25 кг</dd></div>
+            <div class="spec"><dt>Время работы без груза</dt><dd>до 5 ч</dd></div>
+            <div class="spec"><dt>Время работы с грузом 25 кг</dt><dd>более 3 ч</dd></div>
           </dl>
           <p class="robot__price">от 3 400 000 ₽ <small>Pro: 4 200 000 ₽</small></p>
+          <a class="btn" href="#contact">Заказать</a>
         </div>
         <img class="robot__img" loading="lazy" src="public/images/robots/a2-pro.webp" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Unitree A2">
       </li>
@@ -287,10 +339,12 @@
           <h3>Unitree A2-W</h3>
           <p>Колёсно-шагающая платформа для регулярных обходов протяжённых территорий. Проходит препятствия и лестницы.</p>
           <dl>
-            <div class="spec"><dt>Нагрузка в движении</dt><dd>25 кг</dd></div>
-            <div class="spec"><dt>Работа без нагрузки</dt><dd>до 5-6 ч</dd></div>
+            <div class="spec"><dt>Грузоподъёмность в движении</dt><dd>25 кг</dd></div>
+            <div class="spec"><dt>Время работы без груза</dt><dd>до 5-6 ч</dd></div>
+            <div class="spec"><dt>Время работы с грузом 25 кг</dt><dd>более 1,5 ч</dd></div>
           </dl>
           <p class="robot__price">от 3 850 000 ₽ <small>Pro: 4 890 000 ₽</small></p>
+          <a class="btn" href="#contact">Заказать</a>
         </div>
         <img class="robot__img" loading="lazy" src="public/images/robots/a2w-pro.webp" sizes="(max-width: 640px) 70vw, 340px" width="1000" height="1000" alt="Unitree A2-W">
       </li>
@@ -346,47 +400,76 @@
         <h3>Алтай-Кокс, НЛМК</h3>
         <p class="case__robot">Inchbot L1-W Edu</p>
         <p>Тестирование на промышленном объекте. Робот построил трёхмерную цифровую карту территории.</p>
+        <div class="case__media">
+          <img loading="lazy" src="public/images/cases/altai-1-640.webp" srcset="public/images/cases/altai-1-640.webp 640w, public/images/cases/altai-1-1280.webp 1280w" sizes="(max-width: 640px) 80vw, 25vw" width="1280" height="960" alt="Колёсно-шагающий робот на снегу на промышленной площадке">
+          <img loading="lazy" src="public/images/cases/altai-2-640.webp" srcset="public/images/cases/altai-2-640.webp 640w, public/images/cases/altai-2-1280.webp 1280w" sizes="(max-width: 640px) 80vw, 25vw" width="1280" height="960" alt="Тот же робот на площадке, общий план">
+        </div>
       </li>
       <li class="case">
         <h3>МОЭК</h3>
         <p class="case__robot">Inchbot L1-W, пилот</p>
         <p>Робот спустился в коллектор, обследовал его изнутри и построил трёхмерную карту объекта для дальнейшего анализа.</p>
+        <div class="case__media">
+          <video controls playsinline preload="none" poster="public/video/cases/moek-video-poster.webp" width="1280" height="720" aria-label="Шагающий робот идёт по коллектору"><source src="public/video/cases/moek-video.mp4" type="video/mp4"></video>
+          <img loading="lazy" src="public/images/cases/moek-1-640.webp" srcset="public/images/cases/moek-1-640.webp 640w, public/images/cases/moek-1-960.webp 960w" sizes="(max-width: 640px) 80vw, 25vw" width="960" height="458" alt="Шагающий робот на газоне у открытого люка">
+          <img loading="lazy" src="public/images/cases/moek-2-640.webp" srcset="public/images/cases/moek-2-640.webp 640w, public/images/cases/moek-2-960.webp 960w" sizes="(max-width: 640px) 80vw, 25vw" width="960" height="539" alt="Робота опускают в люк коллектора">
+          <img loading="lazy" src="public/images/cases/moek-3-640.webp" srcset="public/images/cases/moek-3-640.webp 640w, public/images/cases/moek-3-960.webp 960w" sizes="(max-width: 640px) 80vw, 25vw" width="960" height="476" alt="Подготовка робота и оборудования у люка">
+        </div>
       </li>
       <li class="case">
         <h3>АО «Прорыв», Росатом</h3>
         <p class="case__robot">Unitree A2-W, пилот</p>
         <p>На площадке «Сириус» в Сочи отрабатывали сценарии автоматизированной работы на объекте сборки топливных элементов.</p>
+        <div class="case__media case__media--video">
+          <video controls playsinline preload="none" poster="public/video/cases/proryv-1-poster.webp" width="1280" height="720" aria-label="Колёсно-шагающий робот ездит по испытательному залу"><source src="public/video/cases/proryv-1.mp4" type="video/mp4"></video>
+          <video controls playsinline preload="none" poster="public/video/cases/proryv-2-poster.webp" width="1280" height="720" aria-label="Робот спускается с уступа в зале"><source src="public/video/cases/proryv-2.mp4" type="video/mp4"></video>
+        </div>
       </li>
       <li class="case">
         <h3>Охрана, «Сириус»</h3>
         <p class="case__robot">Unitree A2-W</p>
         <p>Испытывали охранного робота: автономный патруль, навигацию и мониторинг охраняемой территории.</p>
-      </li>
-      <li class="case case--photo">
-        <img loading="lazy" src="public/images/photos/mud-lidar-960.webp" width="960" height="600" alt="Робот с лидаром на раскисшем грунте">
-        <div>
-          <h3>ДСК «Автобан»</h3>
-          <p class="case__robot">Inchbot L1</p>
-          <p>Тестировали робота на объекте, на размытом грунте и в грязи.</p>
+        <div class="case__media case__media--tall">
+          <img loading="lazy" src="public/images/cases/sirius-1-640.webp" srcset="public/images/cases/sirius-1-640.webp 640w, public/images/cases/sirius-1-853.webp 853w" sizes="(max-width: 640px) 80vw, 25vw" width="853" height="1137" alt="Робот спускается по каменной лестнице">
+          <img loading="lazy" src="public/images/cases/sirius-2-640.webp" srcset="public/images/cases/sirius-2-640.webp 640w, public/images/cases/sirius-2-853.webp 853w" sizes="(max-width: 640px) 80vw, 25vw" width="853" height="1137" alt="Робот стоит на задних колёсах у здания">
         </div>
       </li>
-      <li class="case case--photo">
-        <img loading="lazy" src="public/images/photos/case-3d.webp" width="362" height="565" alt="Робот на снегу на промышленном объекте">
-        <div>
-          <h3>Добывающая отрасль</h3>
-          <p class="case__robot">Inchbot L1</p>
-          <p>Робот собрал данные 3D-лидаром и построил трёхмерную карту промышленного объекта. Персонал в обходе не участвовал.</p>
+      <li class="case">
+        <h3>ДСК «Автобан»</h3>
+        <p class="case__robot">Inchbot L1</p>
+        <p>Тестировали робота на объекте, на размытом грунте и в грязи.</p>
+        <div class="case__media">
+          <img loading="lazy" src="public/images/cases/avtoban-1-640.webp" srcset="public/images/cases/avtoban-1-640.webp 640w, public/images/cases/avtoban-1-960.webp 960w" sizes="(max-width: 640px) 80vw, 25vw" width="960" height="600" alt="Робот со сканером на раскисшем грунте">
+          <img loading="lazy" src="public/images/cases/avtoban-2-640.webp" srcset="public/images/cases/avtoban-2-640.webp 640w, public/images/cases/avtoban-2-1119.webp 1119w" sizes="(max-width: 640px) 80vw, 25vw" width="1119" height="498" alt="Робот на стройке, кадры с объекта">
+          <img loading="lazy" src="public/images/cases/avtoban-3-640.webp" srcset="public/images/cases/avtoban-3-640.webp 640w, public/images/cases/avtoban-3-960.webp 960w" sizes="(max-width: 640px) 80vw, 25vw" width="960" height="640" alt="Робот на стройке рядом с экскаватором">
+        </div>
+      </li>
+      <li class="case">
+        <h3>Добывающая отрасль</h3>
+        <p class="case__robot">Inchbot L1</p>
+        <p>Робот собрал данные 3D-лидаром и построил трёхмерную карту промышленного объекта. Персонал в обходе не участвовал.</p>
+        <div class="case__media">
+          <img loading="lazy" src="public/images/photos/case-3d.webp" width="362" height="565" alt="Робот на снегу на промышленном объекте">
         </div>
       </li>
       <li class="case">
         <h3>ВкусВилл</h3>
         <p class="case__robot">Inchbot L1-W</p>
         <p>Вместе тестировали робота зимой: с коробом на спине, на заснеженной уличной лестнице.</p>
+        <div class="case__media case__media--video">
+          <video controls playsinline preload="none" poster="public/video/cases/vkusvill-1-poster.webp" width="1280" height="720" aria-label="Робот с коробом идёт по снегу вдоль стены"><source src="public/video/cases/vkusvill-1.mp4" type="video/mp4"></video>
+          <video controls playsinline preload="none" poster="public/video/cases/vkusvill-2-poster.webp" width="1280" height="720" aria-label="Робот в глубоком снегу"><source src="public/video/cases/vkusvill-2.mp4" type="video/mp4"></video>
+          <video controls playsinline preload="none" poster="public/video/cases/vkusvill-3-poster.webp" width="1280" height="720" aria-label="Колёса робота в снегу"><source src="public/video/cases/vkusvill-3.mp4" type="video/mp4"></video>
+          <video controls playsinline preload="none" poster="public/video/cases/vkusvill-4-poster.webp" width="1280" height="720" aria-label="Робот поднимается по лестнице к двери магазина"><source src="public/video/cases/vkusvill-4.mp4" type="video/mp4"></video>
+        </div>
       </li>
       <li class="case">
         <h3>Департамент здравоохранения</h3>
         <p class="case__robot">Inchbot M1</p>
         <p>В здании робот проходил лестничные марши.</p>
+        <div class="case__media">
+          <img loading="lazy" src="public/images/cases/depzdrav-1-640.webp" srcset="public/images/cases/depzdrav-1-640.webp 640w, public/images/cases/depzdrav-1-960.webp 960w" sizes="(max-width: 640px) 80vw, 25vw" width="960" height="854" alt="Робот Inchbot M1 на колёсах рядом с роботом-доставщиком">
+        </div>
       </li>
     </ul>
 
@@ -586,7 +669,7 @@
       </figure>
       <div>
         <h2>Кто делает Qudog</h2>
-        <p class="company__lead">Мы пишем ПО для роботов, а ещё продаём и настраиваем самих роботов, поэтому работаем и с железом, и с софтом.</p>
+        <p class="company__lead">Qudog это проект подразделения Qubot, которое входит в группу компаний Qu Group (АО «Кью Групп»). Мы пишем ПО для роботов, а ещё продаём и настраиваем самих роботов, поэтому работаем и с железом, и с софтом.</p>
         <ul class="company__facts">
           <li>Участник <a class="link" href="https://i.moscow/company/54615046" target="_blank" rel="noopener">Московского инновационного кластера ↗</a></li>
           <li>Выступаем в партнёрстве со Сколтехом</li>
@@ -631,6 +714,39 @@
   </div>
 </section>
 
+<!-- ============ ВОПРОСЫ ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Робот заменит охранника?</summary>
+        <p>Робот берёт на себя регулярные обходы и сбор данных. Оценка происшествий, решения и выезд остаются за сотрудниками охраны.</p>
+      </details>
+      <details>
+        <summary>Что с погодой и зимой?</summary>
+        <p>У M1 защита IP67 и работа от −20 до +55 °C. Робот проходит там, где может пройти человек: зимой территорию очищают так же, как для пешеходов, а в сильный гололёд обходы приостанавливают.</p>
+      </details>
+      <details>
+        <summary>Как робот работает ночью?</summary>
+        <p>Обходы идут круглосуточно. Для съёмки в темноте устанавливается тепловизор, а Qudog контролирует уровень освещённости территории.</p>
+      </details>
+      <details>
+        <summary>Где хранятся видео и фото?</summary>
+        <p>На сервере заказчика, срок хранения от 3 месяцев. Правила обработки, доступа и хранения изображений людей и госномеров согласуем при внедрении.</p>
+      </details>
+      <details>
+        <summary>Какую площадь закрывает один робот?</summary>
+        <p>Qudog работает на территориях до 1 км²: большой объект делится на несколько карт. Количество роботов и частоту обходов считаем по плану объекта. Результаты пилота в кампусе нельзя напрямую переносить на другие объекты.</p>
+      </details>
+      <details>
+        <summary>Колёсная платформа пройдёт лестницу?</summary>
+        <p>Да, все пять моделей поднимаются и спускаются по лестницам. L1-W, A2-W и M1 на колёсах едут по ровным участкам и шагают на препятствиях. Геометрию лестниц, сцепление и нагрузку проверяем на выбранной платформе.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ============ ЦЕНЫ НА ПО И УСЛУГИ. Цены платформ в блоке «Роботы» ============ -->
 <section class="section" id="pricing">
   <div class="wrap">
@@ -646,7 +762,7 @@
       </article>
       <article class="license">
         <h3>Бессрочная лицензия</h3>
-        <p class="license__price">1 200 000 ₽ <small>один раз</small></p>
+        <p class="license__price">2 500 000 ₽ <small>один раз</small></p>
         <p>Бессрочное право на установленную версию и техподдержка 12 месяцев.</p>
       </article>
     </div>
@@ -676,39 +792,6 @@
   </div>
 </section>
 
-<!-- ============ ВОПРОСЫ ============ -->
-<section class="section" id="faq">
-  <div class="wrap faq-layout">
-    <h2>Частые вопросы</h2>
-    <div class="faq">
-      <details>
-        <summary>Робот заменит охранника?</summary>
-        <p>Робот берёт на себя регулярные обходы и сбор данных. Оценка происшествий, решения и выезд остаются за сотрудниками охраны.</p>
-      </details>
-      <details>
-        <summary>Что с погодой и зимой?</summary>
-        <p>У M1 защита IP67 и работа от −20 до +55 °C. Робот проходит там, где может пройти человек: зимой территорию очищают так же, как для пешеходов, а в сильный гололёд обходы приостанавливают.</p>
-      </details>
-      <details>
-        <summary>Как робот работает ночью?</summary>
-        <p>Обходы идут круглосуточно. Для съёмки в темноте устанавливается тепловизор, а Qudog контролирует уровень освещённости территории.</p>
-      </details>
-      <details>
-        <summary>Где хранятся видео и фото?</summary>
-        <p>На сервере заказчика, срок хранения от 3 месяцев. Правила обработки, доступа и хранения изображений людей и госномеров согласуем при внедрении.</p>
-      </details>
-      <details>
-        <summary>Какую площадь закрывает один робот?</summary>
-        <p>Qudog работает на территориях до 1 км²: большой объект делится на несколько карт. Количество роботов и частоту обходов считаем по плану объекта. Результаты пилота в кампусе нельзя напрямую переносить на другие объекты.</p>
-      </details>
-      <details>
-        <summary>Колёсная платформа пройдёт лестницу?</summary>
-        <p>Да, все пять моделей поднимаются и спускаются по лестницам. L1-W и A2-W едут на колёсах по ровным участкам и шагают на препятствиях. Геометрию лестниц, сцепление и нагрузку проверяем на выбранной платформе.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
 <!-- ============ ЗАЯВКА. Логика формы в main.js ============ -->
 <section class="section contact" id="contact">
   <div class="wrap contact__grid">
@@ -733,7 +816,7 @@
       <label class="field"><span>Объект и задача</span><textarea name="message" placeholder="Например: склад 20 000 м², ночные обходы, контроль СИЗ"></textarea></label>
       <label class="consent"><input type="checkbox" name="consent" required><span>Разрешаю связаться со мной по указанным контактам для обсуждения заявки</span></label>
       <p class="form__error" id="form-error" role="alert" hidden></p>
-      <button class="btn btn--solid" type="submit">Подготовить письмо</button>
+      <button class="btn btn--solid" type="submit">Отправить</button>
       <p class="note form__hint">Кнопка откроет письмо с заявкой в вашей почтовой программе. Проверьте текст и отправьте его на info@qubot.ru.</p>
     </form>
   </div>

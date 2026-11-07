@@ -3,7 +3,7 @@
 (() => {
   'use strict';
 
-  const SELECTOR = 'main img:not(.hero img, .robot__img)';
+  const SELECTOR = 'main img:not(.hero img, .robot__img, .value__icon, .arm img)';
   const OPEN_MS = 460;
   const CLOSE_MS = 340;
   const SLIDE_MS = 420;
