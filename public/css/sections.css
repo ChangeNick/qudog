@@ -85,8 +85,6 @@
 .functions li { padding: 22px 22px 24px; border-radius: var(--r-l); background: var(--white); }
 .functions h3 { margin: 14px 0 8px; font-size: 19px; }
 .functions p { font-size: 15px; line-height: 1.45; }
-.functions .is-accent { background: var(--blue); }
-.functions .is-accent h3, .functions .is-accent p, .functions .is-accent .ico { color: var(--white); }
 @media (max-width: 1000px) { .functions { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .functions { grid-template-columns: 1fr; } }
 
