@@ -18,6 +18,7 @@
 | Карта сайта | `sitemap.xml`, при заметной правке обновить `<lastmod>` |
 | Новый кейс | `index.html`, блок «КЕЙСЫ», скопировать `<li class="case">`. Фото и ролики кладутся в `.case__media`, файлы в `public/images/cases` и `public/video/cases` |
 | Отчёт о миссии | заменить `public/docs/mission-report-zsm-1.pdf`, цифры и таймлайн в блоке «ПРИМЕР МИССИИ» |
+| Презентация, кнопка на первом экране | заменить `public/docs/qudog-presentation.pdf`, размер файла в подписи кнопки в `index.html` |
 | Документы испытаний | `public/docs/pmi-*.pdf` |
 | Фото команды | `public/images/photos/team-768.webp`, `team-1280.webp` |
 | Цвета, шрифт, радиусы | `public/css/tokens.css` |
