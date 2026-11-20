@@ -212,8 +212,8 @@
     </div>
 
     <!-- Карты. Картинки в public/images/maps -->
-    <h3 class="subhead">Лидарная карта: от облака точек к карте проходимости</h3>
-    <p class="lead-text">Робот строит карту объекта лидаром. По карте высот правим исходную карту: видно, что для робота препятствие, а что нет.</p>
+    <h3 class="subhead">Пример лидарной карты, построенной роботом</h3>
+    <p class="lead-text">Наши инженеры снимают карту объекта и после этого дообучают роботов в симуляции. Миллионы повторений в симуляции исключают ошибки и проблемы.</p>
     <div class="maps">
       <figure>
         <img class="photo photo--flat" loading="lazy" src="public/images/maps/heights.webp" width="1800" height="836" alt="Тепловая карта высот территории: поверхность, объекты и стены зданий разных цветов">
@@ -244,20 +244,23 @@
       <div><dt>Без остановки</dt><dd>между картами робот переходит сам</dd></div>
     </dl>
 
-    <div class="split split--media">
-      <div>
-        <h3>С улицы в помещение и обратно</h3>
-        <p>Большой объект делим на карты. Робот сам переходит с карты территории на карту здания и не прерывает миссию. Так же собирается любой объект: цепочка карт.</p>
-        <ul class="chain" aria-label="Пример цепочки карт">
-          <li>Цех</li><li>Лестница, этажи</li><li>Территория</li><li>Портал</li><li>Выработка</li>
-        </ul>
-        <p class="note">Площадь объекта не ограничена. GNSS подключается, когда сигнал достоверен.</p>
-      </div>
+    <h3 class="subhead">С улицы в помещение и обратно</h3>
+    <p class="lead-text">Большой объект делим на карты. Робот зашёл с улицы в корпус, сам переключился на карту помещения и продолжил навигацию внутри, не прерывая миссию.</p>
+    <div class="handoff">
       <figure>
-        <img class="photo photo--flat photo--map" loading="lazy" src="public/images/maps/hall.webp" width="1124" height="1279" alt="Лидарная карта холла корпуса">
-        <figcaption class="caption">Карта помещения: холл корпуса на той же территории. На неё робот переходит с карты улицы</figcaption>
+        <img class="photo photo--flat photo--map" loading="lazy" src="public/images/maps/heights.webp" width="1800" height="836" alt="Лидарная карта улицы: территория больницы">
+        <figcaption class="caption"><b>Карта 1, улица.</b> Робот идёт по территории ко входу в корпус</figcaption>
+      </figure>
+      <span class="handoff__arrow" aria-hidden="true"></span>
+      <figure>
+        <img class="photo photo--flat photo--map" loading="lazy" src="public/images/maps/hall.webp" width="1124" height="1279" alt="Лидарная карта помещения: холл корпуса">
+        <figcaption class="caption"><b>Карта 2, помещение.</b> Внутри робот продолжает навигацию по карте холла</figcaption>
       </figure>
     </div>
+    <ul class="chain" aria-label="Пример цепочки карт">
+      <li>Цех</li><li>Лестница, этажи</li><li>Территория</li><li>Портал</li><li>Выработка</li>
+    </ul>
+    <p class="note note--after">Так же собирается любой объект: цепочка карт. Площадь объекта не ограничена. GNSS подключается, когда сигнал достоверен.</p>
 
     <div class="split split--media">
       <div>
@@ -270,18 +273,6 @@
           <source src="public/video/stairs.mp4" type="video/mp4">
         </video>
       </figure>
-    </div>
-
-    <div class="split split--reverse split--media">
-      <figure>
-        <img class="photo photo--flat photo--framed" loading="lazy" src="public/images/maps/stairs-lidar.webp" width="1839" height="924" alt="Два среза лидарных точек на лестничной площадке: 5-60 см и 0,6-1,8 м над полом">
-        <figcaption class="caption">Лестничная площадка, вид сверху. В центре контур робота 1,12 × 0,48 м, цвет точки показывает высоту над полом</figcaption>
-      </figure>
-      <div>
-        <h3>Что робот видит на лестнице</h3>
-        <p>Передний и задний лидары дают срезы по высоте. Низкий срез, 5-60 см над полом, показывает, обо что робот может задеть. Срез 0,6-1,8 м показывает стены лестничной клетки и ступени марша.</p>
-        <p>Форма площадки однозначна: робот знает этаж и свою точку, переключает карту и идёт дальше.</p>
-      </div>
     </div>
 
     <h3 class="subhead">Один маршрут без оператора: из помещения на улицу и дальше</h3>
@@ -319,7 +310,26 @@
       </table>
     </div>
 
-    <h3 class="subhead">Почему робот-собака, а не камеры, колёса, гусеницы или дроны</h3>
+    <h3 class="subhead">Робот-собака и другие платформы</h3>
+    <div class="table-scroll">
+      <table class="table table--compare table--platforms">
+        <thead>
+          <tr><th scope="col"><span class="visually-hidden">Критерий</span></th><th scope="col">Колёса</th><th scope="col">Гусеницы</th><th scope="col">Дрон</th><th scope="col">Робот-собака Inchbot M1</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Лестницы, трапы, пороги</th><td data-label="Колёса"><i class="dot dot--no"></i><span class="visually-hidden">нет</span></td><td data-label="Гусеницы"><i class="dot dot--part"></i><span class="visually-hidden">частично</span></td><td data-label="Дрон"><i class="dot dot--yes"></i><span class="visually-hidden">да</span> <small>перелетает</small></td><td data-label="Робот-собака">сама поднимается и спускается</td></tr>
+          <tr><th scope="row">Двери на маршруте</th><td data-label="Колёса"><i class="dot dot--part"></i><span class="visually-hidden">частично</span></td><td data-label="Гусеницы"><i class="dot dot--part"></i><span class="visually-hidden">частично</span></td><td data-label="Дрон"><i class="dot dot--no"></i><span class="visually-hidden">нет</span> <small>нужна открытая дверь</small></td><td data-label="Робот-собака">открывает сама, даже с доводчиком</td></tr>
+          <tr><th scope="row">Узкие проходы</th><td data-label="Колёса"><i class="dot dot--yes"></i><span class="visually-hidden">да</span></td><td data-label="Гусеницы"><i class="dot dot--part"></i><span class="visually-hidden">частично</span></td><td data-label="Дрон"><i class="dot dot--part"></i><span class="visually-hidden">частично</span> <small>только компактные</small></td><td data-label="Робот-собака">корпус 48 см</td></tr>
+          <tr><th scope="row">Груз и тяжёлые датчики</th><td data-label="Колёса"><i class="dot dot--yes"></i><span class="visually-hidden">да</span></td><td data-label="Гусеницы"><i class="dot dot--yes"></i><span class="visually-hidden">да</span></td><td data-label="Дрон"><i class="dot dot--part"></i><span class="visually-hidden">частично</span> <small>30 кг: аппарат 2,8 × 3,1 м</small></td><td data-label="Робот-собака">до 50 кг на корпусе</td></tr>
+          <tr><th scope="row">Время работы с датчиками</th><td data-label="Колёса"><i class="dot dot--yes"></i><span class="visually-hidden">да</span></td><td data-label="Гусеницы"><i class="dot dot--yes"></i><span class="visually-hidden">да</span></td><td data-label="Дрон"><i class="dot dot--part"></i><span class="visually-hidden">частично</span> <small>до 55 мин на АКБ</small></td><td data-label="Робот-собака">до 5 часов на АКБ</td></tr>
+          <tr><th scope="row">Работа в дождь и снег</th><td data-label="Колёса"><i class="dot dot--part"></i><span class="visually-hidden">частично</span></td><td data-label="Гусеницы"><i class="dot dot--yes"></i><span class="visually-hidden">да</span></td><td data-label="Дрон"><i class="dot dot--part"></i><span class="visually-hidden">частично</span> <small>IP55, ветер до 12 м/с</small></td><td data-label="Робот-собака">IP67, от −20 до +55 °C</td></tr>
+          <tr><th scope="row">Работа рядом с людьми</th><td data-label="Колёса"><i class="dot dot--yes"></i><span class="visually-hidden">да</span></td><td data-label="Гусеницы"><i class="dot dot--part"></i><span class="visually-hidden">частично</span></td><td data-label="Дрон"><i class="dot dot--part"></i><span class="visually-hidden">частично</span> <small>винты, шум</small></td><td data-label="Робот-собака">тихий ход, не мешает людям</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="dots-legend"><li><i class="dot dot--yes"></i>да</li><li><i class="dot dot--part"></i>частично</li><li><i class="dot dot--no"></i>нет</li></ul>
+    <p class="note note--after">Экспертная оценка АО «Кью Групп». Дроны, данные производителей: Flyability Elios 3, DJI Matrice 350 RTK, DJI FlyCart 30, Skyfront Perimeter 8.</p>
+
     <h4 class="table-title">Робот и стационарные камеры</h4>
     <div class="table-scroll">
       <table class="table table--compare">
@@ -336,25 +346,6 @@
         </tbody>
       </table>
     </div>
-    <h4 class="table-title">Робот-собака и другие платформы</h4>
-    <p class="lead-text">Объект построен под человека. Робот-собака обходит его на уровне человека: сама открывает дверь, идёт по лестнице и не мешает людям.</p>
-    <div class="table-scroll">
-      <table class="table table--compare table--platforms">
-        <thead>
-          <tr><th scope="col"><span class="visually-hidden">Критерий</span></th><th scope="col">Колёса</th><th scope="col">Гусеницы</th><th scope="col">Дрон</th><th scope="col">Робот-собака Inchbot M1</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Лестницы, трапы, пороги</th><td data-label="Колёса"><span class="mark mark--no">нет</span></td><td data-label="Гусеницы"><span class="mark mark--part">частично</span></td><td data-label="Дрон"><span class="mark mark--yes">да, перелетает</span></td><td data-label="Робот-собака">подъём и спуск сама</td></tr>
-          <tr><th scope="row">Двери на маршруте</th><td data-label="Колёса"><span class="mark mark--part">частично</span></td><td data-label="Гусеницы"><span class="mark mark--part">частично</span></td><td data-label="Дрон"><span class="mark mark--no">нет, нужна открытая дверь</span></td><td data-label="Робот-собака">открывает сама, даже с доводчиком</td></tr>
-          <tr><th scope="row">Узкие проходы</th><td data-label="Колёса"><span class="mark mark--yes">да</span></td><td data-label="Гусеницы"><span class="mark mark--part">частично</span></td><td data-label="Дрон"><span class="mark mark--part">частично: только компактные, до 0,5 м</span></td><td data-label="Робот-собака">корпус 48 см</td></tr>
-          <tr><th scope="row">Груз и тяжёлые датчики</th><td data-label="Колёса"><span class="mark mark--yes">да</span></td><td data-label="Гусеницы"><span class="mark mark--yes">да</span></td><td data-label="Дрон"><span class="mark mark--part">частично: 30 кг несёт аппарат 2,8 × 3,1 м</span></td><td data-label="Робот-собака">до 50 кг на корпусе</td></tr>
-          <tr><th scope="row">Время работы с датчиками</th><td data-label="Колёса"><span class="mark mark--yes">да</span></td><td data-label="Гусеницы"><span class="mark mark--yes">да</span></td><td data-label="Дрон"><span class="mark mark--part">частично: до 55 мин на АКБ, 5 ч только с ДВС</span></td><td data-label="Робот-собака">до 5 часов на АКБ</td></tr>
-          <tr><th scope="row">Работа в дождь и снег</th><td data-label="Колёса"><span class="mark mark--part">частично</span></td><td data-label="Гусеницы"><span class="mark mark--yes">да</span></td><td data-label="Дрон"><span class="mark mark--part">частично: IP55, предел по ветру 12 м/с</span></td><td data-label="Робот-собака">IP67, от −20 до +55 °C</td></tr>
-          <tr><th scope="row">Работа рядом с людьми</th><td data-label="Колёса"><span class="mark mark--yes">да</span></td><td data-label="Гусеницы"><span class="mark mark--part">частично</span></td><td data-label="Дрон"><span class="mark mark--part">частично: винты, шум, поток воздуха</span></td><td data-label="Робот-собака">тихий ход, не мешает людям</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note note--after">Экспертная оценка АО «Кью Групп». Дроны, данные производителей: Flyability Elios 3 (ширина 48 см, полёт 9-12,5 мин), DJI Matrice 350 RTK (до 55 мин, IP55, ветер до 12 м/с), DJI FlyCart 30 (груз 30 кг, 2,8 × 3,1 м с винтами), Skyfront Perimeter 8, гибрид с ДВС (5 ч без груза, 3 ч с грузом 5 кг).</p>
     <p class="note note--after">Робот дополняет видеонаблюдение и охрану. Он берёт на себя регулярные обходы, решают и реагируют люди.</p>
   </div>
 </section>
