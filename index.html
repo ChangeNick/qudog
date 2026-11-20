@@ -244,23 +244,29 @@
       <div><dt>Без остановки</dt><dd>между картами робот переходит сам</dd></div>
     </dl>
 
-    <h3 class="subhead">С улицы в помещение и обратно</h3>
-    <p class="lead-text">Большой объект делим на карты. Робот зашёл с улицы в корпус, сам переключился на карту помещения и продолжил навигацию внутри, не прерывая миссию.</p>
-    <div class="handoff">
-      <figure>
-        <img class="photo photo--flat photo--map" loading="lazy" src="public/images/maps/heights.webp" width="1800" height="836" alt="Лидарная карта улицы: территория больницы">
-        <figcaption class="caption"><b>Карта 1, улица.</b> Робот идёт по территории ко входу в корпус</figcaption>
-      </figure>
-      <span class="handoff__arrow" aria-hidden="true"></span>
-      <figure>
-        <img class="photo photo--flat photo--map" loading="lazy" src="public/images/maps/hall.webp" width="1124" height="1279" alt="Лидарная карта помещения: холл корпуса">
-        <figcaption class="caption"><b>Карта 2, помещение.</b> Внутри робот продолжает навигацию по карте холла</figcaption>
-      </figure>
+    <div class="split split--media split--handoff">
+      <div>
+        <h3>С улицы в помещение и обратно</h3>
+        <p>У улицы и у здания свои карты. На входе робот сам меняет карту и идёт дальше, миссия не прерывается.</p>
+        <ol class="handoff-steps">
+          <li>Идёт по территории по карте улицы</li>
+          <li>У входа в корпус переключается на карту помещения</li>
+          <li>Продолжает маршрут внутри здания</li>
+        </ol>
+        <p class="note">Так же собирается любой объект: цех, этажи, территория, выработка. Площадь не ограничена.</p>
+      </div>
+      <div class="handoff">
+        <figure>
+          <img loading="lazy" src="public/images/maps/heights.webp" width="1800" height="836" alt="Лидарная карта улицы: территория больницы">
+          <figcaption><b>Карта 1</b> улица</figcaption>
+        </figure>
+        <span class="handoff__arrow" aria-hidden="true"></span>
+        <figure>
+          <img loading="lazy" src="public/images/maps/hall.webp" width="1124" height="1279" alt="Лидарная карта помещения: холл корпуса">
+          <figcaption><b>Карта 2</b> помещение, холл корпуса</figcaption>
+        </figure>
+      </div>
     </div>
-    <ul class="chain" aria-label="Пример цепочки карт">
-      <li>Цех</li><li>Лестница, этажи</li><li>Территория</li><li>Портал</li><li>Выработка</li>
-    </ul>
-    <p class="note note--after">Так же собирается любой объект: цепочка карт. Площадь объекта не ограничена. GNSS подключается, когда сигнал достоверен.</p>
 
     <div class="split split--media">
       <div>

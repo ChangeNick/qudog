@@ -350,12 +350,17 @@
 .dot--part { background: linear-gradient(90deg, #f0a020 50%, #fbe3b5 50%); }
 .dot--no { background: #e9e7e6; box-shadow: inset 0 0 0 2px #d64545; }
 .dots-legend { display: flex; gap: 20px; margin-top: 14px; font-size: 14px; color: var(--muted); }
-.handoff { display: grid; grid-template-columns: minmax(0, 1fr) 48px minmax(0, 1fr); gap: 16px; align-items: start; }
-.handoff .photo--map { aspect-ratio: 16 / 10; }
+.handoff { display: grid; grid-template-columns: minmax(0, 1.7fr) 0 minmax(0, 1fr); gap: 10px; padding: 10px; border-radius: var(--r-l); background: var(--black); }
+.handoff figure { position: relative; overflow: hidden; border-radius: var(--r-m); border: 1px solid #333; }
+.handoff img { display: block; width: 100%; height: 250px; object-fit: cover; cursor: zoom-in; }
+.handoff figure:last-child img { object-fit: contain; }
+.handoff figcaption { position: absolute; left: 10px; top: 10px; padding: 5px 10px; border-radius: 99px; background: rgba(255, 255, 255, .94); color: var(--text); font-size: 13.5px; line-height: 1.2; }
 .handoff b { color: var(--ink); font-weight: 600; }
-.handoff__arrow { align-self: center; width: 48px; height: 48px; margin-bottom: 40px; border-radius: 50%; background: var(--blue); position: relative; }
-.handoff__arrow::after { content: ""; position: absolute; inset: 0; margin: auto; width: 12px; height: 12px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: translateX(-3px) rotate(45deg); }
-.handoff + .chain { margin-top: 20px; }
+.handoff__arrow { z-index: 1; align-self: center; justify-self: center; width: 40px; height: 40px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 4px var(--black); position: relative; }
+.handoff__arrow::after { content: ""; position: absolute; inset: 0; margin: auto; width: 10px; height: 10px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: translateX(-2px) rotate(45deg); }
+.handoff-steps { display: grid; gap: 8px; margin: 14px 0 4px; counter-reset: hs; color: var(--ink); font-size: 15.5px; line-height: 1.4; }
+.handoff-steps li { counter-increment: hs; display: flex; gap: 10px; }
+.handoff-steps li::before { content: counter(hs); flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 13px; font-weight: 600; line-height: 22px; text-align: center; }
 @media (max-width: 1000px) { .steps--six { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 760px) { .maps, .map-facts { grid-template-columns: 1fr; } }
 @media (max-width: 640px) {
@@ -364,7 +369,8 @@
   .table--platforms td:last-child::before { color: rgba(255, 255, 255, .75); }
   .table--platforms tbody tr:last-child td:last-child { border: 0; border-radius: var(--r-m); }
   .handoff { grid-template-columns: 1fr; }
-  .handoff__arrow { justify-self: center; margin: 0; transform: rotate(90deg); }
+  .handoff img { height: 190px; }
+  .handoff__arrow { margin: -20px 0; transform: rotate(90deg); }
   .route { overflow-x: auto; }
   .route img { min-width: 760px; }
 }
