@@ -60,7 +60,9 @@
 
 /* Большое видео сразу под первым экраном */
 .film { background: var(--black); padding-block: clamp(28px, 3.6vw, 56px) clamp(36px, 4vw, 64px); color: #cfcfcf; }
-.player--film { aspect-ratio: 2560 / 1402; }
+.film__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px clamp(20px, 2.4vw, 32px); align-items: start; }
+.player--film { aspect-ratio: 16 / 9; }
+@media (max-width: 760px) { .film__grid { grid-template-columns: 1fr; } }
 .player__play { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; padding: 0; border: 0; background: rgba(0,0,0,.14); cursor: pointer; transition: background-color .2s ease-in-out; }
 .player__play[hidden] { display: none; }
 .player__play:hover { background: rgba(0,0,0,.28); }

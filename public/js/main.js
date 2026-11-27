@@ -39,16 +39,18 @@
     if (e.key === 'Escape' && menuOpen) { setMenu(false); menuBtn.focus(); }
   });
 
-  // Большое видео: своя кнопка вместо штатных контролов, пока ролик не запущен.
+  // Видео в первом блоке: своя кнопка вместо штатных контролов, пока ролик не запущен.
   // Без JS остаются обычные контролы.
-  const film = document.getElementById('film-video');
-  const filmPlay = document.getElementById('film-play');
-  film.controls = false;
-  filmPlay.hidden = false;
-  filmPlay.addEventListener('click', () => {
-    filmPlay.hidden = true;
-    film.controls = true;
-    film.play();
+  document.querySelectorAll('.player--film').forEach((p) => {
+    const video = p.querySelector('video');
+    const play = p.querySelector('.player__play');
+    video.controls = false;
+    play.hidden = false;
+    play.addEventListener('click', () => {
+      play.hidden = true;
+      video.controls = true;
+      video.play();
+    });
   });
 
   // Тихие короткие ролики играют только в зоне видимости.
